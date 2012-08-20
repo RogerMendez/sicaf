@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA839211-61E0-449A-B2DF-7789D23DB492}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SICAF.My.MyApplication</StartupObject>
+    <RootNamespace>SICAF</RootNamespace>
+    <AssemblyName>SICAF</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SICAF.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SICAF.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="activof_seleccion.Designer.vb">
+      <DependentUpon>activof_seleccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="activof_seleccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador.Designer.vb">
+      <DependentUpon>Administrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asignacion_registro.Designer.vb">
+      <DependentUpon>asignacion_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="asignacion_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baja_af_registro.Designer.vb">
+      <DependentUpon>baja_af_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="baja_af_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscar_proveedor.Designer.vb">
+      <DependentUpon>buscar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devolucion_registro.Designer.vb">
+      <DependentUpon>devolucion_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="devolucion_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado_eliminar.Designer.vb">
+      <DependentUpon>empleado_eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleado_eliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado_modificar.Designer.vb">
+      <DependentUpon>empleado_modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleado_modificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado_registrar.Designer.vb">
+      <DependentUpon>empleado_registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleado_registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado_seleccionar.Designer.vb">
+      <DependentUpon>empleado_seleccionar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleado_seleccionar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_registro.Designer.vb">
+      <DependentUpon>mantenimiento_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificar_proveedor.Designer.vb">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modificar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="oficina_eliminar.Designer.vb">
+      <DependentUpon>oficina_eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oficina_eliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficina_modificar.Designer.vb">
+      <DependentUpon>oficina_modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oficina_modificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficina_registrar.Designer.vb">
+      <DependentUpon>oficina_registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oficina_registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oficina_seleccionar.Designer.vb">
+      <DependentUpon>oficina_seleccionar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oficina_seleccionar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantillaform.Designer.vb">
+      <DependentUpon>plantillaform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="plantillaform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedor_eliminar.Designer.vb">
+      <DependentUpon>proveedor_eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="proveedor_eliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registroactivo.Designer.vb">
+      <DependentUpon>registroactivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registroactivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registro_proveedor.Designer.vb">
+      <DependentUpon>registro_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registro_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="revaluos_registro.Designer.vb">
+      <DependentUpon>revaluos_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="revaluos_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seleccion_tipo_sub.Designer.vb">
+      <DependentUpon>seleccion_tipo_sub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="seleccion_tipo_sub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sicafDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sicafDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sicafDataSet.vb">
+      <DependentUpon>sicafDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="subtipo_agregar.Designer.vb">
+      <DependentUpon>subtipo_agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="subtipo_agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tcambio_registrar.Designer.vb">
+      <DependentUpon>tcambio_registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tcambio_registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tipo_subtipo_registro.Designer.vb">
+      <DependentUpon>tipo_subtipo_registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_subtipo_registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unidad_registrar.Designer.vb">
+      <DependentUpon>unidad_registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="unidad_registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario_buscar.Designer.vb">
+      <DependentUpon>usuario_buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario_buscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario_eliminar.Designer.vb">
+      <DependentUpon>usuario_eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario_eliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario_modificar.Designer.vb">
+      <DependentUpon>usuario_modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario_modificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario_registrar.Designer.vb">
+      <DependentUpon>usuario_registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario_registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="activof_seleccion.resx">
+      <DependentUpon>activof_seleccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asignacion_registro.resx">
+      <DependentUpon>asignacion_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baja_af_registro.resx">
+      <DependentUpon>baja_af_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscar_proveedor.resx">
+      <DependentUpon>buscar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="devolucion_registro.resx">
+      <DependentUpon>devolucion_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado_eliminar.resx">
+      <DependentUpon>empleado_eliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado_modificar.resx">
+      <DependentUpon>empleado_modificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado_registrar.resx">
+      <DependentUpon>empleado_registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado_seleccionar.resx">
+      <DependentUpon>empleado_seleccionar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_registro.resx">
+      <DependentUpon>mantenimiento_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificar_proveedor.resx">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficina_eliminar.resx">
+      <DependentUpon>oficina_eliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficina_modificar.resx">
+      <DependentUpon>oficina_modificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficina_registrar.resx">
+      <DependentUpon>oficina_registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oficina_seleccionar.resx">
+      <DependentUpon>oficina_seleccionar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plantillaform.resx">
+      <DependentUpon>plantillaform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proveedor_eliminar.resx">
+      <DependentUpon>proveedor_eliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registroactivo.resx">
+      <DependentUpon>registroactivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registro_proveedor.resx">
+      <DependentUpon>registro_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="revaluos_registro.resx">
+      <DependentUpon>revaluos_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seleccion_tipo_sub.resx">
+      <DependentUpon>seleccion_tipo_sub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subtipo_agregar.resx">
+      <DependentUpon>subtipo_agregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tcambio_registrar.resx">
+      <DependentUpon>tcambio_registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipo_subtipo_registro.resx">
+      <DependentUpon>tipo_subtipo_registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unidad_registrar.resx">
+      <DependentUpon>unidad_registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario_buscar.resx">
+      <DependentUpon>usuario_buscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario_eliminar.resx">
+      <DependentUpon>usuario_eliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario_modificar.resx">
+      <DependentUpon>usuario_modificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario_registrar.resx">
+      <DependentUpon>usuario_registrar.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="sicafDataSet.xsc">
+      <DependentUpon>sicafDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sicafDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sicafDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sicafDataSet.xss">
+      <DependentUpon>sicafDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\FondoMenu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\activo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\provee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\unidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\oficina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\activof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\asignar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\devolucion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\tipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\tcambio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Revaluo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
