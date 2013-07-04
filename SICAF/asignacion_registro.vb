@@ -2,11 +2,20 @@
     Dim codaf As String
     Dim ci, respo As Integer
 
-    Private Sub asignacion_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If (Administrador.cod_respo = Nothing) Then
-            respo = Principal.cod_respo
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        If (Administrador.codigo = Nothing) Then
+
         Else
-            respo = Administrador.cod_respo
+            Administrador.AsignarActivoToolStripMenuItem.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub asignacion_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If (Administrador.codigo = Nothing) Then
+            respo = Principal.codigo
+        Else
+            respo = Administrador.codigo
         End If
         codaf = Nothing
         ci = Nothing

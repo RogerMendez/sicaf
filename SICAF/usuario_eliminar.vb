@@ -1,8 +1,13 @@
 ﻿Public Class usuario_eliminar
     Dim nick1, cod As String
 
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Administrador.EliminarUsuarioToolStripMenuItem.Enabled = True
+    End Sub
+
     Private Sub usuario_eliminar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         
+
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click

@@ -27,11 +27,7 @@
         If (codaf = Nothing Or descrip = Nothing Or tipman = Nothing Or personmant = Nothing) Then
             MessageBox.Show("DEBE REGISTRAR LOS CAMPOS OBLIGATORIOS")
         Else
-            Dim costo_p, costo_m As Double
-            costo_p = Cost_partTextBox.Text
-            costo_m = Cost_manTextBox.Text
-            'MessageBox.Show(Cost_partTextBox.Text)
-            filas = Me.QueriesTableAdapter1.insertar_mantenimiento(codaf, Fech_manDateTimePicker.Text, Fech_retDateTimePicker.Text, descrip, tipman, costo_p, costo_m, personmant)
+            filas = Me.QueriesTableAdapter1.insertar_mantenimiento(codaf, Fech_manDateTimePicker.Text, Fech_retDateTimePicker.Text, descrip, tipman, Cost_partTextBox.Text, Cost_manTextBox.Text, personmant)
             If (filas = 2) Then
                 MessageBox.Show("DATOS GUARDADOS CORRECTAMENTE")
                 Close()
@@ -69,14 +65,13 @@
         Dim cadena As String
         cadena = String.Empty
         Try
-            cadena = Cost_partTextBox.Text()
+            cadena = Cost_partTextBox.Text
             numero = Convert.ToDecimal(e.KeyChar.ToString)
 
         Catch ex As Exception
             If e.KeyChar <> "," Or e.KeyChar.Equals(vbBack) Then
                 e.Handled = True
             Else
-
                 If (cadena.LastIndexOf(",") > 0) Then
                     e.Handled = True
                 End If
@@ -97,7 +92,6 @@
             If e.KeyChar <> "," Or e.KeyChar.Equals(vbBack) Then
                 e.Handled = True
             Else
-
                 If (cadena.LastIndexOf(",") > 0) Then
                     e.Handled = True
                 End If
@@ -114,5 +108,4 @@
             ErrorProvider1.SetError(Pers_manTextBox, "Debe Registrar Al Encargado de Mantenimiento")
         End If
     End Sub
-
 End Class

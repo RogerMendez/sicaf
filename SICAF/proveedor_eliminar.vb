@@ -5,6 +5,9 @@
     Private Sub proveedor_eliminar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         nit = String.Empty
     End Sub
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Principal.EliminarProveedorToolStripMenuItem.Enabled = True
+    End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         ''buscar proveedor

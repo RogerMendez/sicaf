@@ -44,6 +44,8 @@ Partial Class registroactivo
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ActivofBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SicafDataSet = New SICAF.sicafDataSet()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -67,12 +69,10 @@ Partial Class registroactivo
         Me.TasaTextBox = New System.Windows.Forms.TextBox()
         Me.CprovTextBox = New System.Windows.Forms.TextBox()
         Me.Cond_actTextBox = New System.Windows.Forms.TextBox()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ActivofBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SicafDataSet = New SICAF.sicafDataSet()
         Me.ActivofTableAdapter = New SICAF.sicafDataSetTableAdapters.activofTableAdapter()
         Me.TableAdapterManager = New SICAF.sicafDataSetTableAdapters.TableAdapterManager()
         Me.QueriesTableAdapter1 = New SICAF.sicafDataSetTableAdapters.QueriesTableAdapter()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         CodafLabel = New System.Windows.Forms.Label()
         DesafLabel = New System.Windows.Forms.Label()
         UnidadLabel = New System.Windows.Forms.Label()
@@ -88,9 +88,9 @@ Partial Class registroactivo
         Label10 = New System.Windows.Forms.Label()
         Label11 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivofBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SicafDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -174,9 +174,9 @@ Partial Class registroactivo
         NrodocLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         NrodocLabel.Location = New System.Drawing.Point(444, 77)
         NrodocLabel.Name = "NrodocLabel"
-        NrodocLabel.Size = New System.Drawing.Size(173, 20)
+        NrodocLabel.Size = New System.Drawing.Size(183, 20)
         NrodocLabel.TabIndex = 14
-        NrodocLabel.Text = "Numero Documento:"
+        NrodocLabel.Text = "Numero Docuemento:"
         '
         'PrecioLabel
         '
@@ -343,6 +343,16 @@ Partial Class registroactivo
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(200, 26)
         Me.TextBox1.TabIndex = 43
+        '
+        'ActivofBindingSource
+        '
+        Me.ActivofBindingSource.DataMember = "activof"
+        Me.ActivofBindingSource.DataSource = Me.SicafDataSet
+        '
+        'SicafDataSet
+        '
+        Me.SicafDataSet.DataSetName = "sicafDataSet"
+        Me.SicafDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label9
         '
@@ -581,20 +591,6 @@ Partial Class registroactivo
         Me.Cond_actTextBox.Size = New System.Drawing.Size(200, 26)
         Me.Cond_actTextBox.TabIndex = 27
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
-        'ActivofBindingSource
-        '
-        Me.ActivofBindingSource.DataMember = "activof"
-        Me.ActivofBindingSource.DataSource = Me.SicafDataSet
-        '
-        'SicafDataSet
-        '
-        Me.SicafDataSet.DataSetName = "sicafDataSet"
-        Me.SicafDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ActivofTableAdapter
         '
         Me.ActivofTableAdapter.ClearBeforeFill = True
@@ -620,6 +616,10 @@ Partial Class registroactivo
         Me.TableAdapterManager.UpdateOrder = SICAF.sicafDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usersTableAdapter = Nothing
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'registroactivo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -634,9 +634,9 @@ Partial Class registroactivo
         Me.Controls.SetChildIndex(Me.Label1, 0)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ActivofBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SicafDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

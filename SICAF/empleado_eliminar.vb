@@ -1,6 +1,10 @@
 ﻿Public Class empleado_eliminar
     Dim ci As Integer
 
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Administrador.EliminarEmpleadoToolStripMenuItem.Enabled = True
+    End Sub
+
     Private Sub empleado_eliminar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ci = Nothing
     End Sub

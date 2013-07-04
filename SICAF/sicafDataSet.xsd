@@ -1228,6 +1228,210 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="devolucionesTableAdapter" GeneratorDataComponentClassName="devolucionesTableAdapter" Name="devoluciones" UserDataComponentName="devolucionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.devoluciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT desaf, unidad, marca, precio, nombres, pat, mat, cargo, fech_dev, nombre, sup_tipo FROM dbo.devoluciones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="pat" DataSetColumn="pat" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="cargo" DataSetColumn="cargo" />
+              <Mapping SourceColumn="fech_dev" DataSetColumn="fech_dev" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mostrar_empleadosTableAdapter" GeneratorDataComponentClassName="mostrar_empleadosTableAdapter" Name="mostrar_empleados" UserDataComponentName="mostrar_empleadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_empleados" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ci, pat, mat, nombres, cargo, descripcion FROM dbo.mostrar_empleados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ci" DataSetColumn="ci" />
+              <Mapping SourceColumn="pat" DataSetColumn="pat" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="cargo" DataSetColumn="cargo" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_activosTableAdapter" GeneratorDataComponentClassName="view_activosTableAdapter" Name="view_activos" UserDataComponentName="view_activosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.view_activos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codaf, desaf, unidad, marca, precio, status, nombre, sup_tipo FROM dbo.view_activos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codaf" DataSetColumn="codaf" />
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mostrar_bajasTableAdapter" GeneratorDataComponentClassName="mostrar_bajasTableAdapter" Name="mostrar_bajas" UserDataComponentName="mostrar_bajasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_bajas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT desaf, unidad, marca, precio, nombres, pat, mat, cargo, fch_baj, motivo, nombre, sup_tipo FROM dbo.mostrar_bajas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="pat" DataSetColumn="pat" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="cargo" DataSetColumn="cargo" />
+              <Mapping SourceColumn="fch_baj" DataSetColumn="fch_baj" />
+              <Mapping SourceColumn="motivo" DataSetColumn="motivo" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mostrar_mantenimientoTableAdapter" GeneratorDataComponentClassName="mostrar_mantenimientoTableAdapter" Name="mostrar_mantenimiento" UserDataComponentName="mostrar_mantenimientoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_mantenimiento" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT desaf, unidad, marca, precio, nombre, sup_tipo, fech_man, fech_ret, desc_man, tipo_man, cost_part, cost_man, pers_man FROM dbo.mostrar_mantenimiento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+              <Mapping SourceColumn="fech_man" DataSetColumn="fech_man" />
+              <Mapping SourceColumn="fech_ret" DataSetColumn="fech_ret" />
+              <Mapping SourceColumn="desc_man" DataSetColumn="desc_man" />
+              <Mapping SourceColumn="tipo_man" DataSetColumn="tipo_man" />
+              <Mapping SourceColumn="cost_part" DataSetColumn="cost_part" />
+              <Mapping SourceColumn="cost_man" DataSetColumn="cost_man" />
+              <Mapping SourceColumn="pers_man" DataSetColumn="pers_man" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mostrar_revauosTableAdapter" GeneratorDataComponentClassName="mostrar_revauosTableAdapter" Name="mostrar_revauos" UserDataComponentName="mostrar_revauosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_revauos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT desaf, unidad, marca, precio, nombre, sup_tipo, resp_rev, obs, fecha FROM dbo.mostrar_revauos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+              <Mapping SourceColumn="resp_rev" DataSetColumn="resp_rev" />
+              <Mapping SourceColumn="obs" DataSetColumn="obs" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportes_asignacionesTableAdapter" GeneratorDataComponentClassName="reportes_asignacionesTableAdapter" Name="reportes_asignaciones" UserDataComponentName="reportes_asignacionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.reportes_asignaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT cod_asing, codaf, desaf, unidad, marca, precio, status, cond_act, nombre, sup_tipo, ci, pat, mat, nombres, cargo, descripcion, obs, fch_ass FROM dbo.reportes_asignaciones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_asing" DataSetColumn="cod_asing" />
+              <Mapping SourceColumn="codaf" DataSetColumn="codaf" />
+              <Mapping SourceColumn="desaf" DataSetColumn="desaf" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="cond_act" DataSetColumn="cond_act" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="sup_tipo" DataSetColumn="sup_tipo" />
+              <Mapping SourceColumn="ci" DataSetColumn="ci" />
+              <Mapping SourceColumn="pat" DataSetColumn="pat" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="cargo" DataSetColumn="cargo" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="obs" DataSetColumn="obs" />
+              <Mapping SourceColumn="fch_ass" DataSetColumn="fch_ass" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.select_report_asigna" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="select_report_asigna" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="select_report_asigna" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="select_report_asigna">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.select_report_asigna</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.select_report_asigna_id" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="select_report_asigna_id" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="select_report_asigna_id" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="select_report_asigna_id">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.select_report_asigna_id</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="eliminar_proveedores" MethodsParameterType="CLR" Modifier="Public" Name="eliminar_proveedores" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="eliminar_proveedores">
@@ -1520,7 +1724,25 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_revaluo" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_revaluo" MethodsParameterType="CLR" Modifier="Public" Name="insertar_revaluo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="insertar_revaluo">
+          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_mantenimiento" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_mantenimiento" MethodsParameterType="CLR" Modifier="Public" Name="insertar_mantenimiento" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="insertar_mantenimiento">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.insertar_mantenimiento</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@codaf" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fechamant" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fechaconclu" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@descrip" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@tipoman" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="decimal" DbType="Decimal" Direction="Input" ParameterName="@cospar" Precision="5" ProviderType="Decimal" Scale="5" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="decimal" DbType="Decimal" Direction="Input" ParameterName="@cosman" Precision="5" ProviderType="Decimal" Scale="5" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@persomant" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_revaluo" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_revaluo" MethodsParameterType="CLR" Modifier="Public" Name="insertar_revaluo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy22" UserSourceName="insertar_revaluo">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.insertar_revaluo</CommandText>
@@ -1534,7 +1756,7 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_bajaaf" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_bajaaf" MethodsParameterType="CLR" Modifier="Public" Name="insertar_bajaaf" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy22" UserSourceName="insertar_bajaaf">
+          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_bajaaf" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_bajaaf" MethodsParameterType="CLR" Modifier="Public" Name="insertar_bajaaf" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy23" UserSourceName="insertar_bajaaf">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.insertar_bajaaf</CommandText>
@@ -1549,7 +1771,7 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.modificar_proveedor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="modificar_proveedor" MethodsParameterType="CLR" Modifier="Public" Name="modificar_proveedor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy23" UserSourceName="modificar_proveedor">
+          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.modificar_proveedor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="modificar_proveedor" MethodsParameterType="CLR" Modifier="Public" Name="modificar_proveedor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="modificar_proveedor">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.modificar_proveedor</CommandText>
@@ -1562,36 +1784,6 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@web" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@tipo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nit" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
-                </Parameters>
-              </DbCommand>
-            </SelectCommand>
-          </DbSource>
-          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.insertar_mantenimiento" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_mantenimiento" MethodsParameterType="CLR" Modifier="Public" Name="insertar_mantenimiento" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="insertar_mantenimiento">
-            <SelectCommand>
-              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                <CommandText>dbo.insertar_mantenimiento</CommandText>
-                <Parameters>
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@codaf" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fechamant" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fechaconclu" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@descrip" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@tipoman" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="decimal" DbType="Decimal" Direction="Input" ParameterName="@cospar" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="decimal" DbType="Decimal" Direction="Input" ParameterName="@cosman" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@persomant" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
-                </Parameters>
-              </DbCommand>
-            </SelectCommand>
-          </DbSource>
-          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.buscando" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="buscando" MethodsParameterType="CLR" Modifier="Public" Name="buscando" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="buscando">
-            <SelectCommand>
-              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                <CommandText>dbo.buscando</CommandText>
-                <Parameters>
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@cod" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="InputOutput" ParameterName="@codigo" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
@@ -2279,6 +2471,497 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="devoluciones" msprop:Generator_TableClassName="devolucionesDataTable" msprop:Generator_TableVarName="tabledevoluciones" msprop:Generator_TablePropName="devoluciones" msprop:Generator_RowDeletingName="devolucionesRowDeleting" msprop:Generator_UserTableName="devoluciones" msprop:Generator_RowChangingName="devolucionesRowChanging" msprop:Generator_RowEvHandlerName="devolucionesRowChangeEventHandler" msprop:Generator_RowDeletedName="devolucionesRowDeleted" msprop:Generator_RowEvArgName="devolucionesRowChangeEvent" msprop:Generator_RowChangedName="devolucionesRowChanged" msprop:Generator_RowClassName="devolucionesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pat" msprop:Generator_ColumnVarNameInTable="columnpat" msprop:Generator_ColumnPropNameInRow="pat" msprop:Generator_ColumnPropNameInTable="patColumn" msprop:Generator_UserColumnName="pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cargo" msprop:Generator_ColumnVarNameInTable="columncargo" msprop:Generator_ColumnPropNameInRow="cargo" msprop:Generator_ColumnPropNameInTable="cargoColumn" msprop:Generator_UserColumnName="cargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fech_dev" msprop:Generator_ColumnVarNameInTable="columnfech_dev" msprop:Generator_ColumnPropNameInRow="fech_dev" msprop:Generator_ColumnPropNameInTable="fech_devColumn" msprop:Generator_UserColumnName="fech_dev" type="xs:dateTime" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mostrar_empleados" msprop:Generator_TableClassName="mostrar_empleadosDataTable" msprop:Generator_TableVarName="tablemostrar_empleados" msprop:Generator_TablePropName="mostrar_empleados" msprop:Generator_RowDeletingName="mostrar_empleadosRowDeleting" msprop:Generator_UserTableName="mostrar_empleados" msprop:Generator_RowChangingName="mostrar_empleadosRowChanging" msprop:Generator_RowEvHandlerName="mostrar_empleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="mostrar_empleadosRowDeleted" msprop:Generator_RowEvArgName="mostrar_empleadosRowChangeEvent" msprop:Generator_RowChangedName="mostrar_empleadosRowChanged" msprop:Generator_RowClassName="mostrar_empleadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ci" msprop:Generator_ColumnVarNameInTable="columnci" msprop:Generator_ColumnPropNameInRow="ci" msprop:Generator_ColumnPropNameInTable="ciColumn" msprop:Generator_UserColumnName="ci">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pat" msprop:Generator_ColumnVarNameInTable="columnpat" msprop:Generator_ColumnPropNameInRow="pat" msprop:Generator_ColumnPropNameInTable="patColumn" msprop:Generator_UserColumnName="pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cargo" msprop:Generator_ColumnVarNameInTable="columncargo" msprop:Generator_ColumnPropNameInRow="cargo" msprop:Generator_ColumnPropNameInTable="cargoColumn" msprop:Generator_UserColumnName="cargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_activos" msprop:Generator_TableClassName="view_activosDataTable" msprop:Generator_TableVarName="tableview_activos" msprop:Generator_TablePropName="view_activos" msprop:Generator_RowDeletingName="view_activosRowDeleting" msprop:Generator_UserTableName="view_activos" msprop:Generator_RowChangingName="view_activosRowChanging" msprop:Generator_RowEvHandlerName="view_activosRowChangeEventHandler" msprop:Generator_RowDeletedName="view_activosRowDeleted" msprop:Generator_RowEvArgName="view_activosRowChangeEvent" msprop:Generator_RowChangedName="view_activosRowChanged" msprop:Generator_RowClassName="view_activosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codaf" msprop:Generator_ColumnVarNameInTable="columncodaf" msprop:Generator_ColumnPropNameInRow="codaf" msprop:Generator_ColumnPropNameInTable="codafColumn" msprop:Generator_UserColumnName="codaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mostrar_bajas" msprop:Generator_TableClassName="mostrar_bajasDataTable" msprop:Generator_TableVarName="tablemostrar_bajas" msprop:Generator_TablePropName="mostrar_bajas" msprop:Generator_RowDeletingName="mostrar_bajasRowDeleting" msprop:Generator_UserTableName="mostrar_bajas" msprop:Generator_RowChangingName="mostrar_bajasRowChanging" msprop:Generator_RowEvHandlerName="mostrar_bajasRowChangeEventHandler" msprop:Generator_RowDeletedName="mostrar_bajasRowDeleted" msprop:Generator_RowEvArgName="mostrar_bajasRowChangeEvent" msprop:Generator_RowChangedName="mostrar_bajasRowChanged" msprop:Generator_RowClassName="mostrar_bajasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pat" msprop:Generator_ColumnVarNameInTable="columnpat" msprop:Generator_ColumnPropNameInRow="pat" msprop:Generator_ColumnPropNameInTable="patColumn" msprop:Generator_UserColumnName="pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cargo" msprop:Generator_ColumnVarNameInTable="columncargo" msprop:Generator_ColumnPropNameInRow="cargo" msprop:Generator_ColumnPropNameInTable="cargoColumn" msprop:Generator_UserColumnName="cargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fch_baj" msprop:Generator_ColumnVarNameInTable="columnfch_baj" msprop:Generator_ColumnPropNameInRow="fch_baj" msprop:Generator_ColumnPropNameInTable="fch_bajColumn" msprop:Generator_UserColumnName="fch_baj" type="xs:dateTime" />
+              <xs:element name="motivo" msprop:Generator_ColumnVarNameInTable="columnmotivo" msprop:Generator_ColumnPropNameInRow="motivo" msprop:Generator_ColumnPropNameInTable="motivoColumn" msprop:Generator_UserColumnName="motivo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mostrar_mantenimiento" msprop:Generator_TableClassName="mostrar_mantenimientoDataTable" msprop:Generator_TableVarName="tablemostrar_mantenimiento" msprop:Generator_TablePropName="mostrar_mantenimiento" msprop:Generator_RowDeletingName="mostrar_mantenimientoRowDeleting" msprop:Generator_UserTableName="mostrar_mantenimiento" msprop:Generator_RowChangingName="mostrar_mantenimientoRowChanging" msprop:Generator_RowEvHandlerName="mostrar_mantenimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="mostrar_mantenimientoRowDeleted" msprop:Generator_RowEvArgName="mostrar_mantenimientoRowChangeEvent" msprop:Generator_RowChangedName="mostrar_mantenimientoRowChanged" msprop:Generator_RowClassName="mostrar_mantenimientoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fech_man" msprop:Generator_ColumnVarNameInTable="columnfech_man" msprop:Generator_ColumnPropNameInRow="fech_man" msprop:Generator_ColumnPropNameInTable="fech_manColumn" msprop:Generator_UserColumnName="fech_man" type="xs:dateTime" />
+              <xs:element name="fech_ret" msprop:Generator_ColumnVarNameInTable="columnfech_ret" msprop:Generator_ColumnPropNameInRow="fech_ret" msprop:Generator_ColumnPropNameInTable="fech_retColumn" msprop:Generator_UserColumnName="fech_ret" type="xs:dateTime" />
+              <xs:element name="desc_man" msprop:Generator_ColumnVarNameInTable="columndesc_man" msprop:Generator_ColumnPropNameInRow="desc_man" msprop:Generator_ColumnPropNameInTable="desc_manColumn" msprop:Generator_UserColumnName="desc_man">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo_man" msprop:Generator_ColumnVarNameInTable="columntipo_man" msprop:Generator_ColumnPropNameInRow="tipo_man" msprop:Generator_ColumnPropNameInTable="tipo_manColumn" msprop:Generator_UserColumnName="tipo_man">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cost_part" msprop:Generator_ColumnVarNameInTable="columncost_part" msprop:Generator_ColumnPropNameInRow="cost_part" msprop:Generator_ColumnPropNameInTable="cost_partColumn" msprop:Generator_UserColumnName="cost_part" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cost_man" msprop:Generator_ColumnVarNameInTable="columncost_man" msprop:Generator_ColumnPropNameInRow="cost_man" msprop:Generator_ColumnPropNameInTable="cost_manColumn" msprop:Generator_UserColumnName="cost_man" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pers_man" msprop:Generator_ColumnVarNameInTable="columnpers_man" msprop:Generator_ColumnPropNameInRow="pers_man" msprop:Generator_ColumnPropNameInTable="pers_manColumn" msprop:Generator_UserColumnName="pers_man">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mostrar_revauos" msprop:Generator_TableClassName="mostrar_revauosDataTable" msprop:Generator_TableVarName="tablemostrar_revauos" msprop:Generator_TablePropName="mostrar_revauos" msprop:Generator_RowDeletingName="mostrar_revauosRowDeleting" msprop:Generator_UserTableName="mostrar_revauos" msprop:Generator_RowChangingName="mostrar_revauosRowChanging" msprop:Generator_RowEvHandlerName="mostrar_revauosRowChangeEventHandler" msprop:Generator_RowDeletedName="mostrar_revauosRowDeleted" msprop:Generator_RowEvArgName="mostrar_revauosRowChangeEvent" msprop:Generator_RowChangedName="mostrar_revauosRowChanged" msprop:Generator_RowClassName="mostrar_revauosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="resp_rev" msprop:Generator_ColumnVarNameInTable="columnresp_rev" msprop:Generator_ColumnPropNameInRow="resp_rev" msprop:Generator_ColumnPropNameInTable="resp_revColumn" msprop:Generator_UserColumnName="resp_rev" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="obs" msprop:Generator_ColumnVarNameInTable="columnobs" msprop:Generator_ColumnPropNameInRow="obs" msprop:Generator_ColumnPropNameInTable="obsColumn" msprop:Generator_UserColumnName="obs" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reportes_asignaciones" msprop:Generator_TableClassName="reportes_asignacionesDataTable" msprop:Generator_TableVarName="tablereportes_asignaciones" msprop:Generator_TablePropName="reportes_asignaciones" msprop:Generator_RowDeletingName="reportes_asignacionesRowDeleting" msprop:Generator_UserTableName="reportes_asignaciones" msprop:Generator_RowChangingName="reportes_asignacionesRowChanging" msprop:Generator_RowEvHandlerName="reportes_asignacionesRowChangeEventHandler" msprop:Generator_RowDeletedName="reportes_asignacionesRowDeleted" msprop:Generator_RowEvArgName="reportes_asignacionesRowChangeEvent" msprop:Generator_RowChangedName="reportes_asignacionesRowChanged" msprop:Generator_RowClassName="reportes_asignacionesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_asing" msprop:Generator_ColumnVarNameInTable="columncod_asing" msprop:Generator_ColumnPropNameInRow="cod_asing" msprop:Generator_ColumnPropNameInTable="cod_asingColumn" msprop:Generator_UserColumnName="cod_asing" type="xs:int" />
+              <xs:element name="codaf" msprop:Generator_ColumnVarNameInTable="columncodaf" msprop:Generator_ColumnPropNameInRow="codaf" msprop:Generator_ColumnPropNameInTable="codafColumn" msprop:Generator_UserColumnName="codaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desaf" msprop:Generator_ColumnVarNameInTable="columndesaf" msprop:Generator_ColumnPropNameInRow="desaf" msprop:Generator_ColumnPropNameInTable="desafColumn" msprop:Generator_UserColumnName="desaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cond_act" msprop:Generator_ColumnVarNameInTable="columncond_act" msprop:Generator_ColumnPropNameInRow="cond_act" msprop:Generator_ColumnPropNameInTable="cond_actColumn" msprop:Generator_UserColumnName="cond_act">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sup_tipo" msprop:Generator_ColumnVarNameInTable="columnsup_tipo" msprop:Generator_ColumnPropNameInRow="sup_tipo" msprop:Generator_ColumnPropNameInTable="sup_tipoColumn" msprop:Generator_UserColumnName="sup_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ci" msprop:Generator_ColumnVarNameInTable="columnci" msprop:Generator_ColumnPropNameInRow="ci" msprop:Generator_ColumnPropNameInTable="ciColumn" msprop:Generator_UserColumnName="ci">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pat" msprop:Generator_ColumnVarNameInTable="columnpat" msprop:Generator_ColumnPropNameInRow="pat" msprop:Generator_ColumnPropNameInTable="patColumn" msprop:Generator_UserColumnName="pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cargo" msprop:Generator_ColumnVarNameInTable="columncargo" msprop:Generator_ColumnPropNameInRow="cargo" msprop:Generator_ColumnPropNameInTable="cargoColumn" msprop:Generator_UserColumnName="cargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="obs" msprop:Generator_ColumnVarNameInTable="columnobs" msprop:Generator_ColumnPropNameInRow="obs" msprop:Generator_ColumnPropNameInTable="obsColumn" msprop:Generator_UserColumnName="obs" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fch_ass" msprop:Generator_ColumnVarNameInTable="columnfch_ass" msprop:Generator_ColumnPropNameInRow="fch_ass" msprop:Generator_ColumnPropNameInTable="fch_assColumn" msprop:Generator_UserColumnName="fch_ass" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -2345,29 +3028,37 @@ SELECT codigo, nombre FROM tipo WHERE (codigo = @codigo)</CommandText>
       <xs:selector xpath=".//mstns:tipo" />
       <xs:field xpath="mstns:codigo" />
     </xs:unique>
+    <xs:unique name="mostrar_empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:mostrar_empleados" />
+      <xs:field xpath="mstns:ci" />
+    </xs:unique>
+    <xs:unique name="view_activos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_activos" />
+      <xs:field xpath="mstns:codaf" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__activof__cprov__15502E78" msdata:parent="proveedores" msdata:child="activof" msdata:parentkey="nit" msdata:childkey="cprov" msprop:Generator_UserChildTable="activof" msprop:Generator_ChildPropName="GetactivofRows" msprop:Generator_UserParentTable="proveedores" msprop:Generator_UserRelationName="FK__activof__cprov__15502E78" msprop:Generator_RelationVarName="relationFK__activof__cprov__15502E78" msprop:Generator_ParentPropName="proveedoresRow" />
-      <msdata:Relationship name="FK__activof__res_reg__164452B1" msdata:parent="users" msdata:child="activof" msdata:parentkey="cod_user" msdata:childkey="res_reg" msprop:Generator_UserChildTable="activof" msprop:Generator_ChildPropName="GetactivofRows" msprop:Generator_UserParentTable="users" msprop:Generator_UserRelationName="FK__activof__res_reg__164452B1" msprop:Generator_RelationVarName="relationFK__activof__res_reg__164452B1" msprop:Generator_ParentPropName="usersRow" />
-      <msdata:Relationship name="FK__asigns__cod_act__2A4B4B5E" msdata:parent="activof" msdata:child="asigns" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__asigns__cod_act__2A4B4B5E" msprop:Generator_RelationVarName="relationFK__asigns__cod_act__2A4B4B5E" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__asigns__cod_fun__2B3F6F97" msdata:parent="empleado" msdata:child="asigns" msdata:parentkey="ci" msdata:childkey="cod_fun" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_UserParentTable="empleado" msprop:Generator_UserRelationName="FK__asigns__cod_fun__2B3F6F97" msprop:Generator_RelationVarName="relationFK__asigns__cod_fun__2B3F6F97" msprop:Generator_ParentPropName="empleadoRow" />
-      <msdata:Relationship name="FK__asigns__resp_ass__2C3393D0" msdata:parent="users" msdata:child="asigns" msdata:parentkey="cod_user" msdata:childkey="resp_ass" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_UserParentTable="users" msprop:Generator_UserRelationName="FK__asigns__resp_ass__2C3393D0" msprop:Generator_RelationVarName="relationFK__asigns__resp_ass__2C3393D0" msprop:Generator_ParentPropName="usersRow" />
-      <msdata:Relationship name="FK__bajact__cod_act__30F848ED" msdata:parent="activof" msdata:child="bajact" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__bajact__cod_act__30F848ED" msprop:Generator_RelationVarName="relationFK__bajact__cod_act__30F848ED" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__bajact__cod_fun__32E0915F" msdata:parent="empleado" msdata:child="bajact" msdata:parentkey="ci" msdata:childkey="cod_fun" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_UserParentTable="empleado" msprop:Generator_UserRelationName="FK__bajact__cod_fun__32E0915F" msprop:Generator_RelationVarName="relationFK__bajact__cod_fun__32E0915F" msprop:Generator_ParentPropName="empleadoRow" />
-      <msdata:Relationship name="FK__bajact__cod_resp__31EC6D26" msdata:parent="users" msdata:child="bajact" msdata:parentkey="cod_user" msdata:childkey="cod_resp" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_UserParentTable="users" msprop:Generator_UserRelationName="FK__bajact__cod_resp__31EC6D26" msprop:Generator_RelationVarName="relationFK__bajact__cod_resp__31EC6D26" msprop:Generator_ParentPropName="usersRow" />
-      <msdata:Relationship name="FK__devol__cod_act__37A5467C" msdata:parent="activof" msdata:child="devol" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="devol" msprop:Generator_ChildPropName="GetdevolRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__devol__cod_act__37A5467C" msprop:Generator_RelationVarName="relationFK__devol__cod_act__37A5467C" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__devol__cod_func__38996AB5" msdata:parent="empleado" msdata:child="devol" msdata:parentkey="ci" msdata:childkey="cod_func" msprop:Generator_UserChildTable="devol" msprop:Generator_ChildPropName="GetdevolRows" msprop:Generator_UserParentTable="empleado" msprop:Generator_UserRelationName="FK__devol__cod_func__38996AB5" msprop:Generator_RelationVarName="relationFK__devol__cod_func__38996AB5" msprop:Generator_ParentPropName="empleadoRow" />
-      <msdata:Relationship name="FK__empleado__cod_un__25869641" msdata:parent="unidad" msdata:child="empleado" msdata:parentkey="cod_uni" msdata:childkey="cod_uni" msprop:Generator_UserChildTable="empleado" msprop:Generator_ChildPropName="GetempleadoRows" msprop:Generator_UserParentTable="unidad" msprop:Generator_UserRelationName="FK__empleado__cod_un__25869641" msprop:Generator_RelationVarName="relationFK__empleado__cod_un__25869641" msprop:Generator_ParentPropName="unidadRow" />
-      <msdata:Relationship name="FK__mantenimi__cod_a__3D5E1FD2" msdata:parent="activof" msdata:child="mantenimiento" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="mantenimiento" msprop:Generator_ChildPropName="GetmantenimientoRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__mantenimi__cod_a__3D5E1FD2" msprop:Generator_RelationVarName="relationFK__mantenimi__cod_a__3D5E1FD2" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__tpcambio__resp_r__4222D4EF" msdata:parent="users" msdata:child="tpcambio" msdata:parentkey="cod_user" msdata:childkey="resp_reg" msprop:Generator_UserChildTable="tpcambio" msprop:Generator_ChildPropName="GettpcambioRows" msprop:Generator_UserParentTable="users" msprop:Generator_UserRelationName="FK__tpcambio__resp_r__4222D4EF" msprop:Generator_RelationVarName="relationFK__tpcambio__resp_r__4222D4EF" msprop:Generator_ParentPropName="usersRow" />
-      <msdata:Relationship name="FK__oficina__cod_uni__108B795B" msdata:parent="unidad" msdata:child="oficina" msdata:parentkey="cod_uni" msdata:childkey="cod_unid" msprop:Generator_UserChildTable="oficina" msprop:Generator_ChildPropName="GetoficinaRows" msprop:Generator_ParentPropName="unidadRow" msprop:Generator_UserRelationName="FK__oficina__cod_uni__108B795B" msprop:Generator_RelationVarName="relationFK__oficina__cod_uni__108B795B" msprop:Generator_UserParentTable="unidad" />
-      <msdata:Relationship name="FK__revaluos__cod_ac__656C112C" msdata:parent="activof" msdata:child="revaluos" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="revaluos" msprop:Generator_ChildPropName="GetrevaluosRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__revaluos__cod_ac__656C112C" msprop:Generator_RelationVarName="relationFK__revaluos__cod_ac__656C112C" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__cuentacon__cod_a__6A30C649" msdata:parent="activof" msdata:child="cuentacontable" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="cuentacontable" msprop:Generator_ChildPropName="GetcuentacontableRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__cuentacon__cod_a__6A30C649" msprop:Generator_RelationVarName="relationFK__cuentacon__cod_a__6A30C649" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__activof_t__codaf__7E37BEF6" msdata:parent="activof" msdata:child="activof_tipo" msdata:parentkey="codaf" msdata:childkey="codaf" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_UserParentTable="activof" msprop:Generator_UserRelationName="FK__activof_t__codaf__7E37BEF6" msprop:Generator_RelationVarName="relationFK__activof_t__codaf__7E37BEF6" msprop:Generator_ParentPropName="activofRow" />
-      <msdata:Relationship name="FK__activof_t__codst__00200768" msdata:parent="subtipo" msdata:child="activof_tipo" msdata:parentkey="codigosub" msdata:childkey="codst" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_UserParentTable="subtipo" msprop:Generator_UserRelationName="FK__activof_t__codst__00200768" msprop:Generator_RelationVarName="relationFK__activof_t__codst__00200768" msprop:Generator_ParentPropName="subtipoRow" />
-      <msdata:Relationship name="FK__activof_ti__codt__7F2BE32F" msdata:parent="tipo" msdata:child="activof_tipo" msdata:parentkey="codigo" msdata:childkey="codt" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_UserParentTable="tipo" msprop:Generator_UserRelationName="FK__activof_ti__codt__7F2BE32F" msprop:Generator_RelationVarName="relationFK__activof_ti__codt__7F2BE32F" msprop:Generator_ParentPropName="tipoRow" />
-      <msdata:Relationship name="FK__subtipo__codtipo__787EE5A0" msdata:parent="tipo" msdata:child="subtipo" msdata:parentkey="codigo" msdata:childkey="codtipo" msprop:Generator_UserChildTable="subtipo" msprop:Generator_ChildPropName="GetsubtipoRows" msprop:Generator_UserParentTable="tipo" msprop:Generator_UserRelationName="FK__subtipo__codtipo__787EE5A0" msprop:Generator_RelationVarName="relationFK__subtipo__codtipo__787EE5A0" msprop:Generator_ParentPropName="tipoRow" />
+      <msdata:Relationship name="FK__activof__cprov__15502E78" msdata:parent="proveedores" msdata:child="activof" msdata:parentkey="nit" msdata:childkey="cprov" msprop:Generator_UserChildTable="activof" msprop:Generator_ChildPropName="GetactivofRows" msprop:Generator_ParentPropName="proveedoresRow" msprop:Generator_UserRelationName="FK__activof__cprov__15502E78" msprop:Generator_RelationVarName="relationFK__activof__cprov__15502E78" msprop:Generator_UserParentTable="proveedores" />
+      <msdata:Relationship name="FK__activof__res_reg__164452B1" msdata:parent="users" msdata:child="activof" msdata:parentkey="cod_user" msdata:childkey="res_reg" msprop:Generator_UserChildTable="activof" msprop:Generator_ChildPropName="GetactivofRows" msprop:Generator_ParentPropName="usersRow" msprop:Generator_UserRelationName="FK__activof__res_reg__164452B1" msprop:Generator_RelationVarName="relationFK__activof__res_reg__164452B1" msprop:Generator_UserParentTable="users" />
+      <msdata:Relationship name="FK__asigns__cod_act__2A4B4B5E" msdata:parent="activof" msdata:child="asigns" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__asigns__cod_act__2A4B4B5E" msprop:Generator_RelationVarName="relationFK__asigns__cod_act__2A4B4B5E" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__asigns__cod_fun__2B3F6F97" msdata:parent="empleado" msdata:child="asigns" msdata:parentkey="ci" msdata:childkey="cod_fun" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_ParentPropName="empleadoRow" msprop:Generator_UserRelationName="FK__asigns__cod_fun__2B3F6F97" msprop:Generator_RelationVarName="relationFK__asigns__cod_fun__2B3F6F97" msprop:Generator_UserParentTable="empleado" />
+      <msdata:Relationship name="FK__asigns__resp_ass__2C3393D0" msdata:parent="users" msdata:child="asigns" msdata:parentkey="cod_user" msdata:childkey="resp_ass" msprop:Generator_UserChildTable="asigns" msprop:Generator_ChildPropName="GetasignsRows" msprop:Generator_ParentPropName="usersRow" msprop:Generator_UserRelationName="FK__asigns__resp_ass__2C3393D0" msprop:Generator_RelationVarName="relationFK__asigns__resp_ass__2C3393D0" msprop:Generator_UserParentTable="users" />
+      <msdata:Relationship name="FK__bajact__cod_act__30F848ED" msdata:parent="activof" msdata:child="bajact" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__bajact__cod_act__30F848ED" msprop:Generator_RelationVarName="relationFK__bajact__cod_act__30F848ED" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__bajact__cod_fun__32E0915F" msdata:parent="empleado" msdata:child="bajact" msdata:parentkey="ci" msdata:childkey="cod_fun" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_ParentPropName="empleadoRow" msprop:Generator_UserRelationName="FK__bajact__cod_fun__32E0915F" msprop:Generator_RelationVarName="relationFK__bajact__cod_fun__32E0915F" msprop:Generator_UserParentTable="empleado" />
+      <msdata:Relationship name="FK__bajact__cod_resp__31EC6D26" msdata:parent="users" msdata:child="bajact" msdata:parentkey="cod_user" msdata:childkey="cod_resp" msprop:Generator_UserChildTable="bajact" msprop:Generator_ChildPropName="GetbajactRows" msprop:Generator_ParentPropName="usersRow" msprop:Generator_UserRelationName="FK__bajact__cod_resp__31EC6D26" msprop:Generator_RelationVarName="relationFK__bajact__cod_resp__31EC6D26" msprop:Generator_UserParentTable="users" />
+      <msdata:Relationship name="FK__devol__cod_act__37A5467C" msdata:parent="activof" msdata:child="devol" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="devol" msprop:Generator_ChildPropName="GetdevolRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__devol__cod_act__37A5467C" msprop:Generator_RelationVarName="relationFK__devol__cod_act__37A5467C" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__devol__cod_func__38996AB5" msdata:parent="empleado" msdata:child="devol" msdata:parentkey="ci" msdata:childkey="cod_func" msprop:Generator_UserChildTable="devol" msprop:Generator_ChildPropName="GetdevolRows" msprop:Generator_ParentPropName="empleadoRow" msprop:Generator_UserRelationName="FK__devol__cod_func__38996AB5" msprop:Generator_RelationVarName="relationFK__devol__cod_func__38996AB5" msprop:Generator_UserParentTable="empleado" />
+      <msdata:Relationship name="FK__empleado__cod_un__25869641" msdata:parent="unidad" msdata:child="empleado" msdata:parentkey="cod_uni" msdata:childkey="cod_uni" msprop:Generator_UserChildTable="empleado" msprop:Generator_ChildPropName="GetempleadoRows" msprop:Generator_ParentPropName="unidadRow" msprop:Generator_UserRelationName="FK__empleado__cod_un__25869641" msprop:Generator_RelationVarName="relationFK__empleado__cod_un__25869641" msprop:Generator_UserParentTable="unidad" />
+      <msdata:Relationship name="FK__mantenimi__cod_a__3D5E1FD2" msdata:parent="activof" msdata:child="mantenimiento" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="mantenimiento" msprop:Generator_ChildPropName="GetmantenimientoRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__mantenimi__cod_a__3D5E1FD2" msprop:Generator_RelationVarName="relationFK__mantenimi__cod_a__3D5E1FD2" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__tpcambio__resp_r__4222D4EF" msdata:parent="users" msdata:child="tpcambio" msdata:parentkey="cod_user" msdata:childkey="resp_reg" msprop:Generator_UserChildTable="tpcambio" msprop:Generator_ChildPropName="GettpcambioRows" msprop:Generator_ParentPropName="usersRow" msprop:Generator_UserRelationName="FK__tpcambio__resp_r__4222D4EF" msprop:Generator_RelationVarName="relationFK__tpcambio__resp_r__4222D4EF" msprop:Generator_UserParentTable="users" />
+      <msdata:Relationship name="FK__oficina__cod_uni__108B795B" msdata:parent="unidad" msdata:child="oficina" msdata:parentkey="cod_uni" msdata:childkey="cod_unid" msprop:Generator_UserChildTable="oficina" msprop:Generator_ChildPropName="GetoficinaRows" msprop:Generator_UserParentTable="unidad" msprop:Generator_UserRelationName="FK__oficina__cod_uni__108B795B" msprop:Generator_RelationVarName="relationFK__oficina__cod_uni__108B795B" msprop:Generator_ParentPropName="unidadRow" />
+      <msdata:Relationship name="FK__revaluos__cod_ac__656C112C" msdata:parent="activof" msdata:child="revaluos" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="revaluos" msprop:Generator_ChildPropName="GetrevaluosRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__revaluos__cod_ac__656C112C" msprop:Generator_RelationVarName="relationFK__revaluos__cod_ac__656C112C" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__cuentacon__cod_a__6A30C649" msdata:parent="activof" msdata:child="cuentacontable" msdata:parentkey="codaf" msdata:childkey="cod_act" msprop:Generator_UserChildTable="cuentacontable" msprop:Generator_ChildPropName="GetcuentacontableRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__cuentacon__cod_a__6A30C649" msprop:Generator_RelationVarName="relationFK__cuentacon__cod_a__6A30C649" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__activof_t__codaf__7E37BEF6" msdata:parent="activof" msdata:child="activof_tipo" msdata:parentkey="codaf" msdata:childkey="codaf" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_ParentPropName="activofRow" msprop:Generator_UserRelationName="FK__activof_t__codaf__7E37BEF6" msprop:Generator_RelationVarName="relationFK__activof_t__codaf__7E37BEF6" msprop:Generator_UserParentTable="activof" />
+      <msdata:Relationship name="FK__activof_t__codst__00200768" msdata:parent="subtipo" msdata:child="activof_tipo" msdata:parentkey="codigosub" msdata:childkey="codst" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_ParentPropName="subtipoRow" msprop:Generator_UserRelationName="FK__activof_t__codst__00200768" msprop:Generator_RelationVarName="relationFK__activof_t__codst__00200768" msprop:Generator_UserParentTable="subtipo" />
+      <msdata:Relationship name="FK__activof_ti__codt__7F2BE32F" msdata:parent="tipo" msdata:child="activof_tipo" msdata:parentkey="codigo" msdata:childkey="codt" msprop:Generator_UserChildTable="activof_tipo" msprop:Generator_ChildPropName="Getactivof_tipoRows" msprop:Generator_ParentPropName="tipoRow" msprop:Generator_UserRelationName="FK__activof_ti__codt__7F2BE32F" msprop:Generator_RelationVarName="relationFK__activof_ti__codt__7F2BE32F" msprop:Generator_UserParentTable="tipo" />
+      <msdata:Relationship name="FK__subtipo__codtipo__787EE5A0" msdata:parent="tipo" msdata:child="subtipo" msdata:parentkey="codigo" msdata:childkey="codtipo" msprop:Generator_UserChildTable="subtipo" msprop:Generator_ChildPropName="GetsubtipoRows" msprop:Generator_ParentPropName="tipoRow" msprop:Generator_UserRelationName="FK__subtipo__codtipo__787EE5A0" msprop:Generator_RelationVarName="relationFK__subtipo__codtipo__787EE5A0" msprop:Generator_UserParentTable="tipo" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

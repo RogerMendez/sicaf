@@ -2,6 +2,10 @@
     Dim nombre As String
     Dim nit, direc, fono, tipo As String
 
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Administrador.ModficarProveedorToolStripMenuItem.Enabled = True
+    End Sub
+
     Private Sub modificar_proveedor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         nombre = String.Empty
         nit = String.Empty

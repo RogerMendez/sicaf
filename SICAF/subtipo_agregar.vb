@@ -2,6 +2,10 @@
     Dim codt As Integer
     Dim nombre As String
 
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Administrador.AgregarQuitarSubtipoToolStripMenuItem.Enabled = True
+    End Sub
+
     Private Sub subtipo_agregar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         GroupBox2.Visible = False
         Me.TipoTableAdapter.Fill(Me.SicafDataSet.tipo)

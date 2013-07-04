@@ -36,6 +36,7 @@ Partial Class activof_seleccion
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.SubtipoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -45,7 +46,6 @@ Partial Class activof_seleccion
         Me.TipoTableAdapter = New SICAF.sicafDataSetTableAdapters.tipoTableAdapter()
         Me.SubtipoTableAdapter = New SICAF.sicafDataSetTableAdapters.subtipoTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.SicafDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivofBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivofDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -183,6 +183,15 @@ Partial Class activof_seleccion
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Busqueda Activo Fijo"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(648, 67)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 27)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Mostrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ComboBox2
         '
         Me.ComboBox2.DataSource = Me.SubtipoBindingSource
@@ -254,15 +263,6 @@ Partial Class activof_seleccion
         Me.Button1.Text = "Cancelar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(648, 67)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 27)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Mostrar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'activof_seleccion
         '

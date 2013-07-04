@@ -54,6 +54,16 @@ Partial Class Administrador
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModficarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActivoNuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,7 +74,7 @@ Partial Class Administrador
         Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElimiarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QueriesTableAdapter1 = New SICAF.sicafDataSetTableAdapters.QueriesTableAdapter()
+        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -84,10 +94,10 @@ Partial Class Administrador
         '
         Me.MenuStrip2.BackgroundImage = Global.SICAF.My.Resources.Resources.FondoMenu
         Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem1, Me.UnidadToolStripMenuItem2, Me.BuscarToolStripMenuItem1, Me.EmpleadoToolStripMenuItem2, Me.ActivosToolStripMenuItem1, Me.TipoCambioToolStripMenuItem, Me.ProveedoresToolStripMenuItem1})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem1, Me.UnidadToolStripMenuItem2, Me.BuscarToolStripMenuItem1, Me.EmpleadoToolStripMenuItem2, Me.ActivosToolStripMenuItem1, Me.TipoCambioToolStripMenuItem, Me.ProveedoresToolStripMenuItem1, Me.ToolStripMenuItem1})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(961, 72)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1166, 72)
         Me.MenuStrip2.TabIndex = 3
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -304,6 +314,69 @@ Partial Class Administrador
         Me.ModficarProveedorToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
         Me.ModficarProveedorToolStripMenuItem.Text = "Modficar Proveedor"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ToolStripMenuItem9, Me.ToolStripMenuItem10, Me.ToolStripMenuItem11})
+        Me.ToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.proveedores
+        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(132, 68)
+        Me.ToolStripMenuItem1.Text = "Reportes"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem2.Text = "Reporte de asignacion de activos"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem3.Text = "Reporte de Activos"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem4.Text = "Reporte devoluciones  Activos"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem5.Text = "Reporte de bajas de activos"
+        '
+        'ToolStripMenuItem6
+        '
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem6.Text = "Reporte de empleados"
+        '
+        'ToolStripMenuItem7
+        '
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem7.Text = "Reporte de mantenimiento"
+        '
+        'ToolStripMenuItem8
+        '
+        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem8.Text = "Reporte de revaluo"
+        '
+        'ToolStripMenuItem9
+        '
+        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem9.Text = "Reporte de proveedores"
+        '
+        'ToolStripMenuItem10
+        '
+        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem10.Text = "Reporte de Entrega"
+        '
         'ActivoToolStripMenuItem
         '
         Me.ActivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ActivoNuevoToolStripMenuItem})
@@ -378,11 +451,17 @@ Partial Class Administrador
         Me.ElimiarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.ElimiarUsuarioToolStripMenuItem.Text = "Elimiar Usuario"
         '
+        'ToolStripMenuItem11
+        '
+        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
+        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem11.Text = "Reporte de Devoluciones"
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(961, 638)
+        Me.ClientSize = New System.Drawing.Size(1166, 638)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IsMdiContainer = True
@@ -438,5 +517,15 @@ Partial Class Administrador
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RegistrarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModficarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents QueriesTableAdapter1 As SICAF.sicafDataSetTableAdapters.QueriesTableAdapter
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem8 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem9 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem10 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem11 As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -25,10 +25,16 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         'mostrar activos fijos
+        MessageBox.Show(ComboBox1.SelectedValue)
+        MessageBox.Show(ComboBox2.SelectedValue)
         If (ComboBox1.Text.Length > 0 And ComboBox2.Text.Length > 0) Then
             Me.ActivofTableAdapter.seleccionar_activof_tipo(Me.SicafDataSet.activof, ComboBox1.SelectedValue, ComboBox2.SelectedValue)
         Else
             MessageBox.Show("DEBE SELECCIONAR UN SUBTIPO")
         End If
+    End Sub
+
+    Private Sub ActivofDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ActivofDataGridView.CellContentClick
+
     End Sub
 End Class

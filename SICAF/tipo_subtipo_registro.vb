@@ -2,6 +2,10 @@
     Public codt As Integer
     Public nombre As String
 
+    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        Administrador.RegistroTipoToolStripMenuItem.Enabled = True
+    End Sub
+
     Private Sub tipo_subtipo_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         codt = Nothing
         nombre = String.Empty

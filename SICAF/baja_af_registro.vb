@@ -2,7 +2,7 @@
     Dim codaf, func, motivo, obs, respo As String
 
     Private Sub baja_af_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        respo = My.Forms.Administrador.cod_respo
+        respo = My.Forms.Administrador.codigo
         codaf = String.Empty
         func = String.Empty
         motivo = String.Empty
