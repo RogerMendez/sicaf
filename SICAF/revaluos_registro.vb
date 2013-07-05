@@ -2,14 +2,10 @@
     Dim codaf, obs As String
     Dim respo As String
 
-    Private Sub Form3_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.RevaluarActvoToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub revaluos_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         codaf = String.Empty
         obs = String.Empty
-        respo = My.Forms.Administrador.codigo
+        respo = My.Forms.Administrador.cod_respo
         'MessageBox.Show(My.Forms.Administrador.codigo)
     End Sub
 

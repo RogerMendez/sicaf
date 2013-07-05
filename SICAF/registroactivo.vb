@@ -1,20 +1,13 @@
-﻿Public Class registroactivo
+﻿
+Public Class registroactivo
     Dim vutil As Integer
     Dim nit, des, uni, tdoc, ndoc, cond, estado, respo As String
     Dim precio As Double
     Public cod As String
     Dim codt, cods As Integer
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.RegistrarActivoToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub registroactivo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If (Administrador.codigo = Nothing) Then
-            respo = Administrador.codigo
-        Else
-            respo = Principal.codigo
-        End If
+        respo = "Roger"
         nit = Nothing
         cod = String.Empty
         des = String.Empty
@@ -24,9 +17,14 @@
         precio = Nothing
         vutil = Nothing
         cond = String.Empty
-        estado = "NUEVO"
+        estado = "ALMACEN"
         codt = Nothing
         cods = Nothing
+        If (Administrador.cod_respo = Nothing) Then
+            respo = Principal.cod_respo
+        Else
+            respo = Administrador.cod_respo
+        End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -54,9 +52,6 @@
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         'guardar
         Dim filas As Object
-        MessageBox.Show(nit)
-        MessageBox.Show(codt)
-        MessageBox.Show(cods)
         filas = Nothing
         If (cod = Nothing Or des = Nothing Or uni = Nothing Or tdoc = Nothing Or ndoc = Nothing Or precio = Nothing Or vutil = Nothing Or cond = Nothing Or estado = Nothing Or cods = Nothing Or codt = Nothing) Then
             MessageBox.Show("DEBE REGISTRAR TODOS LOS CAMPOS REQUERIDOS")
@@ -210,4 +205,5 @@
         Me.QueriesTableAdapter1.mostrar_nombres(codt, cods, nomt, noms)
         TextBox1.Text = nomt + " -> " + noms
     End Sub
+
 End Class

@@ -15,7 +15,7 @@
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
         'mostrar subtipo despues de escojer tipo
-        Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(Me.SicafDataSet.subtipo, ComboBox1.SelectedValue)
+        Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(Me.SicafDataSet.subtipo, ComboBox1.SelectedValue)
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -25,16 +25,10 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         'mostrar activos fijos
-        MessageBox.Show(ComboBox1.SelectedValue)
-        MessageBox.Show(ComboBox2.SelectedValue)
         If (ComboBox1.Text.Length > 0 And ComboBox2.Text.Length > 0) Then
             Me.ActivofTableAdapter.seleccionar_activof_tipo(Me.SicafDataSet.activof, ComboBox1.SelectedValue, ComboBox2.SelectedValue)
         Else
             MessageBox.Show("DEBE SELECCIONAR UN SUBTIPO")
         End If
-    End Sub
-
-    Private Sub ActivofDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ActivofDataGridView.CellContentClick
-
     End Sub
 End Class

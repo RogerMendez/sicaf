@@ -2,10 +2,6 @@
     Dim cod As String
     Dim des As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.ReToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub unidad_registrar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         cod = String.Empty
         des = String.Empty
@@ -36,7 +32,7 @@
         'validar que el codigo no este vacio y que no exista
         Dim flag As Boolean
         flag = False
-        If (Cod_uniTextBox.Text.Length > 0) Then
+        If (Cod_uniTextBox.Text.Length > 0 And Cod_uniTextBox.Text.Length <= 3) Then
             Me.QueriesTableAdapter1.existe_unidad(Cod_uniTextBox.Text, flag)
             If (flag = False) Then
                 cod = Cod_uniTextBox.Text
@@ -45,7 +41,7 @@
                 ErrorProvider1.SetError(Cod_uniTextBox, "El Codigo Ya Esta Registrado")
             End If
         Else
-            ErrorProvider1.SetError(Cod_uniTextBox, "Debe Ingresar El Codigo")
+            ErrorProvider1.SetError(Cod_uniTextBox, "Debe Ingresar El Codigo Correcto")
             cod = String.Empty
         End If
     End Sub

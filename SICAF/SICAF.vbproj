@@ -170,12 +170,6 @@
     <Compile Include="empleado_seleccionar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LISTA DE ASIGNACIONES.Designer.vb">
-      <DependentUpon>LISTA DE ASIGNACIONES.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LISTA DE ASIGNACIONES.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
@@ -192,12 +186,6 @@
       <DependentUpon>modificar_proveedor.vb</DependentUpon>
     </Compile>
     <Compile Include="modificar_proveedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MOSTRAR_BAJAS.Designer.vb">
-      <DependentUpon>MOSTRAR_BAJAS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MOSTRAR_BAJAS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -269,46 +257,34 @@
     <Compile Include="registro_proveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTE DE ACTIVOS.Designer.vb">
-      <DependentUpon>REPORTE DE ACTIVOS.vb</DependentUpon>
+    <Compile Include="REPORTE BAJAS.Designer.vb">
+      <DependentUpon>REPORTE BAJAS.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE DE ACTIVOS.vb">
+    <Compile Include="REPORTE BAJAS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTE DE EMPLEADOS.Designer.vb">
-      <DependentUpon>REPORTE DE EMPLEADOS.vb</DependentUpon>
+    <Compile Include="REPORTE EMPLEADOS.Designer.vb">
+      <DependentUpon>REPORTE EMPLEADOS.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE DE EMPLEADOS.vb">
+    <Compile Include="REPORTE EMPLEADOS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTE DE ENTREGAS.Designer.vb">
-      <DependentUpon>REPORTE DE ENTREGAS.vb</DependentUpon>
+    <Compile Include="REPORTE MANTENIMIENTO.Designer.vb">
+      <DependentUpon>REPORTE MANTENIMIENTO.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE DE ENTREGAS.vb">
+    <Compile Include="REPORTE MANTENIMIENTO.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTE DE MANTENIMIENTO.Designer.vb">
-      <DependentUpon>REPORTE DE MANTENIMIENTO.vb</DependentUpon>
+    <Compile Include="REPORTE REVALUO.Designer.vb">
+      <DependentUpon>REPORTE REVALUO.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE DE MANTENIMIENTO.vb">
+    <Compile Include="REPORTE REVALUO.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTE DE PROVEEDORES.Designer.vb">
-      <DependentUpon>REPORTE DE PROVEEDORES.vb</DependentUpon>
+    <Compile Include="REPORTES_ACTIVOS_ASIGNADOS.Designer.vb">
+      <DependentUpon>REPORTES_ACTIVOS_ASIGNADOS.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE DE PROVEEDORES.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="REPORTE DE REVALUOS.Designer.vb">
-      <DependentUpon>REPORTE DE REVALUOS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="REPORTE DE REVALUOS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="REPORTE DEVOLUCIONES.Designer.vb">
-      <DependentUpon>REPORTE DEVOLUCIONES.vb</DependentUpon>
-    </Compile>
-    <Compile Include="REPORTE DEVOLUCIONES.vb">
+    <Compile Include="REPORTES_ACTIVOS_ASIGNADOS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reportes_asignaciones.vb">
@@ -329,10 +305,16 @@
       <DependentUpon>reporte_activos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPORTE_DEVOLUCION IMPRIMIR.Designer.vb">
-      <DependentUpon>REPORTE_DEVOLUCION IMPRIMIR.vb</DependentUpon>
+    <Compile Include="REPORTE_DEVOLUCIONES.Designer.vb">
+      <DependentUpon>REPORTE_DEVOLUCIONES.vb</DependentUpon>
     </Compile>
-    <Compile Include="REPORTE_DEVOLUCION IMPRIMIR.vb">
+    <Compile Include="REPORTE_DEVOLUCIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTE_DE_ACTIVOS.Designer.vb">
+      <DependentUpon>REPORTE_DE_ACTIVOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTE_DE_ACTIVOS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reporte_emple.vb">
@@ -347,10 +329,10 @@
       <DependentUpon>REPORTE_PROVEEDORES.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPORTE_REVALUO.vb">
+    <Compile Include="REPORTE_REVALUOS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>REPORTE_REVALUO.rpt</DependentUpon>
+      <DependentUpon>REPORTE_REVALUOS.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="report_asigna.vb">
@@ -371,11 +353,35 @@
       <DependentUpon>report_devol.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORT_DEVOL_IMP.Designer.vb">
+      <DependentUpon>REPORT_DEVOL_IMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT_DEVOL_IMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="REPORT_DEVOL_IMPR.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>REPORT_DEVOL_IMPR.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT_ENTREGA.Designer.vb">
+      <DependentUpon>REPORT_ENTREGA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT_ENTREGA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_mantenimiento2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_mantenimiento2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT_PROVEDOR.Designer.vb">
+      <DependentUpon>REPORT_PROVEDOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT_PROVEDOR.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="REPOR_MANTENIMIENTO.vb">
       <AutoGen>True</AutoGen>
@@ -398,9 +404,6 @@
     <Compile Include="sicafDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sicafDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="sicafDataSet.vb">
       <DependentUpon>sicafDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="subtipo_agregar.Designer.vb">
@@ -491,9 +494,6 @@
     <EmbeddedResource Include="empleado_seleccionar.resx">
       <DependentUpon>empleado_seleccionar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LISTA DE ASIGNACIONES.resx">
-      <DependentUpon>LISTA DE ASIGNACIONES.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
@@ -502,9 +502,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modificar_proveedor.resx">
       <DependentUpon>modificar_proveedor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MOSTRAR_BAJAS.resx">
-      <DependentUpon>MOSTRAR_BAJAS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -539,26 +536,20 @@
     <EmbeddedResource Include="registro_proveedor.resx">
       <DependentUpon>registro_proveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE ACTIVOS.resx">
-      <DependentUpon>REPORTE DE ACTIVOS.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTE BAJAS.resx">
+      <DependentUpon>REPORTE BAJAS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE EMPLEADOS.resx">
-      <DependentUpon>REPORTE DE EMPLEADOS.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTE EMPLEADOS.resx">
+      <DependentUpon>REPORTE EMPLEADOS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE ENTREGAS.resx">
-      <DependentUpon>REPORTE DE ENTREGAS.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTE MANTENIMIENTO.resx">
+      <DependentUpon>REPORTE MANTENIMIENTO.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE MANTENIMIENTO.resx">
-      <DependentUpon>REPORTE DE MANTENIMIENTO.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTE REVALUO.resx">
+      <DependentUpon>REPORTE REVALUO.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE PROVEEDORES.resx">
-      <DependentUpon>REPORTE DE PROVEEDORES.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DE REVALUOS.resx">
-      <DependentUpon>REPORTE DE REVALUOS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE DEVOLUCIONES.resx">
-      <DependentUpon>REPORTE DEVOLUCIONES.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTES_ACTIVOS_ASIGNADOS.resx">
+      <DependentUpon>REPORTES_ACTIVOS_ASIGNADOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes_asignaciones.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -572,8 +563,11 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporte_activos.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE_DEVOLUCION IMPRIMIR.resx">
-      <DependentUpon>REPORTE_DEVOLUCION IMPRIMIR.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTE_DEVOLUCIONES.resx">
+      <DependentUpon>REPORTE_DEVOLUCIONES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE_DE_ACTIVOS.resx">
+      <DependentUpon>REPORTE_DE_ACTIVOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte_emple.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -583,9 +577,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>REPORTE_PROVEEDORES.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTE_REVALUO.rpt">
+    <EmbeddedResource Include="REPORTE_REVALUOS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>REPORTE_REVALUO.vb</LastGenOutput>
+      <LastGenOutput>REPORTE_REVALUOS.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="report_asigna.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -599,9 +593,22 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>report_devol.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORT_DEVOL_IMP.resx">
+      <DependentUpon>REPORT_DEVOL_IMP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORT_DEVOL_IMPR.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>REPORT_DEVOL_IMPR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT_ENTREGA.resx">
+      <DependentUpon>REPORT_ENTREGA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_mantenimiento2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_mantenimiento2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT_PROVEDOR.resx">
+      <DependentUpon>REPORT_PROVEDOR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPOR_MANTENIMIENTO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

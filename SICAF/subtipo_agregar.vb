@@ -2,10 +2,6 @@
     Dim codt As Integer
     Dim nombre As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.AgregarQuitarSubtipoToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub subtipo_agregar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         GroupBox2.Visible = False
         Me.TipoTableAdapter.Fill(Me.SicafDataSet.tipo)
@@ -17,7 +13,7 @@
             GroupBox2.Visible = True
             codt = NombreComboBox.SelectedValue
             nombre = NombreComboBox.Text
-            Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+            Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
             Label2.Text = "SubTipos En El Tipo " + nombre
         Else
             codt = Nothing
@@ -31,7 +27,7 @@
             GroupBox2.Visible = True
             codt = NombreComboBox.SelectedValue
             nombre = NombreComboBox.Text
-            Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+            Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
             ErrorProvider1.SetError(NombreComboBox, Nothing)
             Label2.Text = "SubTipos En El Tipo " + nombre
         Else
@@ -47,7 +43,7 @@
             ErrorProvider1.SetError(TextBox2, Nothing)
             filas = Me.SubtipoTableAdapter.Insert(TextBox2.Text, codt)
             If (filas) Then
-                Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+                Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
                 TextBox2.Text = String.Empty
             Else
                 MessageBox.Show("OCURRIO UN ERROR AL AGREGAR EL TIPO")

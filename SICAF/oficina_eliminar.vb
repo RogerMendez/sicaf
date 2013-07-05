@@ -1,10 +1,6 @@
 ﻿Public Class oficina_eliminar
     Dim cod As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.EliminarOficinaToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub oficina_eliminar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         cod = String.Empty
     End Sub

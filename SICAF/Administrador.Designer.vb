@@ -24,6 +24,7 @@ Partial Class Administrador
     Private Sub InitializeComponent()
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QueriesTableAdapter1 = New SICAF.sicafDataSetTableAdapters.QueriesTableAdapter()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,6 +65,7 @@ Partial Class Administrador
         Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActivoNuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,7 +76,6 @@ Partial Class Administrador
         Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElimiarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,11 +94,12 @@ Partial Class Administrador
         'MenuStrip2
         '
         Me.MenuStrip2.BackgroundImage = Global.SICAF.My.Resources.Resources.FondoMenu
+        Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem1, Me.UnidadToolStripMenuItem2, Me.BuscarToolStripMenuItem1, Me.EmpleadoToolStripMenuItem2, Me.ActivosToolStripMenuItem1, Me.TipoCambioToolStripMenuItem, Me.ProveedoresToolStripMenuItem1, Me.ToolStripMenuItem1})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem1, Me.EmpleadoToolStripMenuItem2, Me.UnidadToolStripMenuItem2, Me.BuscarToolStripMenuItem1, Me.ActivosToolStripMenuItem1, Me.TipoCambioToolStripMenuItem, Me.ProveedoresToolStripMenuItem1, Me.ToolStripMenuItem1})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1166, 72)
+        Me.MenuStrip2.Size = New System.Drawing.Size(164, 638)
         Me.MenuStrip2.TabIndex = 3
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -107,28 +109,28 @@ Partial Class Administrador
         Me.UsuarioToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.usuarios
         Me.UsuarioToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(124, 68)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(151, 52)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'NuevoUsuarioToolStripMenuItem1
         '
         Me.NuevoUsuarioToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources._new
         Me.NuevoUsuarioToolStripMenuItem1.Name = "NuevoUsuarioToolStripMenuItem1"
-        Me.NuevoUsuarioToolStripMenuItem1.Size = New System.Drawing.Size(204, 26)
+        Me.NuevoUsuarioToolStripMenuItem1.Size = New System.Drawing.Size(214, 26)
         Me.NuevoUsuarioToolStripMenuItem1.Text = "Nuevo Usuario"
         '
         'ModificarUsuarioToolStripMenuItem1
         '
         Me.ModificarUsuarioToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.update
         Me.ModificarUsuarioToolStripMenuItem1.Name = "ModificarUsuarioToolStripMenuItem1"
-        Me.ModificarUsuarioToolStripMenuItem1.Size = New System.Drawing.Size(204, 26)
+        Me.ModificarUsuarioToolStripMenuItem1.Size = New System.Drawing.Size(214, 26)
         Me.ModificarUsuarioToolStripMenuItem1.Text = "Modificar Usuario"
         '
         'EliminarUsuarioToolStripMenuItem
         '
         Me.EliminarUsuarioToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.delete
         Me.EliminarUsuarioToolStripMenuItem.Name = "EliminarUsuarioToolStripMenuItem"
-        Me.EliminarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(204, 26)
+        Me.EliminarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.EliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario"
         '
         'UnidadToolStripMenuItem2
@@ -137,14 +139,14 @@ Partial Class Administrador
         Me.UnidadToolStripMenuItem2.Image = Global.SICAF.My.Resources.Resources.unidad
         Me.UnidadToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UnidadToolStripMenuItem2.Name = "UnidadToolStripMenuItem2"
-        Me.UnidadToolStripMenuItem2.Size = New System.Drawing.Size(120, 68)
+        Me.UnidadToolStripMenuItem2.Size = New System.Drawing.Size(151, 52)
         Me.UnidadToolStripMenuItem2.Text = "Unidad"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources._new
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.ReToolStripMenuItem.Text = "Nueva Unidad"
         '
         'BuscarToolStripMenuItem1
@@ -153,28 +155,28 @@ Partial Class Administrador
         Me.BuscarToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.oficina
         Me.BuscarToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BuscarToolStripMenuItem1.Name = "BuscarToolStripMenuItem1"
-        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(135, 68)
+        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(151, 68)
         Me.BuscarToolStripMenuItem1.Text = "Oficina"
         '
         'NuevaOficinaToolStripMenuItem
         '
         Me.NuevaOficinaToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources._new
         Me.NuevaOficinaToolStripMenuItem.Name = "NuevaOficinaToolStripMenuItem"
-        Me.NuevaOficinaToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.NuevaOficinaToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.NuevaOficinaToolStripMenuItem.Text = "Nueva Oficina"
         '
         'ModificarOficicaToolStripMenuItem
         '
         Me.ModificarOficicaToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.update
         Me.ModificarOficicaToolStripMenuItem.Name = "ModificarOficicaToolStripMenuItem"
-        Me.ModificarOficicaToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.ModificarOficicaToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.ModificarOficicaToolStripMenuItem.Text = "Modificar Oficica"
         '
         'EliminarOficinaToolStripMenuItem
         '
         Me.EliminarOficinaToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.delete
         Me.EliminarOficinaToolStripMenuItem.Name = "EliminarOficinaToolStripMenuItem"
-        Me.EliminarOficinaToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.EliminarOficinaToolStripMenuItem.Size = New System.Drawing.Size(207, 26)
         Me.EliminarOficinaToolStripMenuItem.Text = "Eliminar Oficina"
         '
         'EmpleadoToolStripMenuItem2
@@ -183,28 +185,28 @@ Partial Class Administrador
         Me.EmpleadoToolStripMenuItem2.Image = Global.SICAF.My.Resources.Resources.empleado
         Me.EmpleadoToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(139, 68)
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(151, 52)
         Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
         '
         'RegistrarEmpleadoToolStripMenuItem
         '
         Me.RegistrarEmpleadoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources._new
         Me.RegistrarEmpleadoToolStripMenuItem.Name = "RegistrarEmpleadoToolStripMenuItem"
-        Me.RegistrarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.RegistrarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.RegistrarEmpleadoToolStripMenuItem.Text = "Registrar Empleado"
         '
         'ModificarEmpleadoToolStripMenuItem
         '
         Me.ModificarEmpleadoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.update
         Me.ModificarEmpleadoToolStripMenuItem.Name = "ModificarEmpleadoToolStripMenuItem"
-        Me.ModificarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.ModificarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.ModificarEmpleadoToolStripMenuItem.Text = "Modificar Empleado"
         '
         'EliminarEmpleadoToolStripMenuItem
         '
         Me.EliminarEmpleadoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.delete
         Me.EliminarEmpleadoToolStripMenuItem.Name = "EliminarEmpleadoToolStripMenuItem"
-        Me.EliminarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.EliminarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.EliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado"
         '
         'ActivosToolStripMenuItem1
@@ -213,7 +215,7 @@ Partial Class Administrador
         Me.ActivosToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.activof
         Me.ActivosToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ActivosToolStripMenuItem1.Name = "ActivosToolStripMenuItem1"
-        Me.ActivosToolStripMenuItem1.Size = New System.Drawing.Size(120, 68)
+        Me.ActivosToolStripMenuItem1.Size = New System.Drawing.Size(151, 52)
         Me.ActivosToolStripMenuItem1.Text = "Activos"
         '
         'TIpoActivosToolStripMenuItem
@@ -221,60 +223,60 @@ Partial Class Administrador
         Me.TIpoActivosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroTipoToolStripMenuItem, Me.AgregarQuitarSubtipoToolStripMenuItem})
         Me.TIpoActivosToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.tipo
         Me.TIpoActivosToolStripMenuItem.Name = "TIpoActivosToolStripMenuItem"
-        Me.TIpoActivosToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.TIpoActivosToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.TIpoActivosToolStripMenuItem.Text = "Tipo Activos"
         '
         'RegistroTipoToolStripMenuItem
         '
         Me.RegistroTipoToolStripMenuItem.Name = "RegistroTipoToolStripMenuItem"
-        Me.RegistroTipoToolStripMenuItem.Size = New System.Drawing.Size(194, 26)
+        Me.RegistroTipoToolStripMenuItem.Size = New System.Drawing.Size(204, 26)
         Me.RegistroTipoToolStripMenuItem.Text = "Registro Tipo"
         '
         'AgregarQuitarSubtipoToolStripMenuItem
         '
         Me.AgregarQuitarSubtipoToolStripMenuItem.Name = "AgregarQuitarSubtipoToolStripMenuItem"
-        Me.AgregarQuitarSubtipoToolStripMenuItem.Size = New System.Drawing.Size(194, 26)
+        Me.AgregarQuitarSubtipoToolStripMenuItem.Size = New System.Drawing.Size(204, 26)
         Me.AgregarQuitarSubtipoToolStripMenuItem.Text = "Agregar Subtipo"
         '
         'RegistrarActivoToolStripMenuItem
         '
         Me.RegistrarActivoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.Add
         Me.RegistrarActivoToolStripMenuItem.Name = "RegistrarActivoToolStripMenuItem"
-        Me.RegistrarActivoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.RegistrarActivoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.RegistrarActivoToolStripMenuItem.Text = "Registrar Activo"
         '
         'AsignarActivoToolStripMenuItem
         '
         Me.AsignarActivoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.asignar
         Me.AsignarActivoToolStripMenuItem.Name = "AsignarActivoToolStripMenuItem"
-        Me.AsignarActivoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.AsignarActivoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.AsignarActivoToolStripMenuItem.Text = "Asignar Activo"
         '
         'DevoluciónActivoToolStripMenuItem
         '
         Me.DevoluciónActivoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.devolucion
         Me.DevoluciónActivoToolStripMenuItem.Name = "DevoluciónActivoToolStripMenuItem"
-        Me.DevoluciónActivoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.DevoluciónActivoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.DevoluciónActivoToolStripMenuItem.Text = "Devolución Activo"
         '
         'mantenimientoToolStripMenuItem
         '
         Me.mantenimientoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.mante
         Me.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem"
-        Me.mantenimientoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.mantenimientoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.mantenimientoToolStripMenuItem.Text = "Mantenimiento Activo"
         '
         'RevaluarActvoToolStripMenuItem
         '
         Me.RevaluarActvoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.Revaluo
         Me.RevaluarActvoToolStripMenuItem.Name = "RevaluarActvoToolStripMenuItem"
-        Me.RevaluarActvoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.RevaluarActvoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.RevaluarActvoToolStripMenuItem.Text = "Revaluar Activo"
         '
         'BajaActivoToolStripMenuItem
         '
         Me.BajaActivoToolStripMenuItem.Name = "BajaActivoToolStripMenuItem"
-        Me.BajaActivoToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.BajaActivoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.BajaActivoToolStripMenuItem.Text = "Baja Activo"
         '
         'TipoCambioToolStripMenuItem
@@ -283,14 +285,14 @@ Partial Class Administrador
         Me.TipoCambioToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.tcambio
         Me.TipoCambioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TipoCambioToolStripMenuItem.Name = "TipoCambioToolStripMenuItem"
-        Me.TipoCambioToolStripMenuItem.Size = New System.Drawing.Size(158, 68)
+        Me.TipoCambioToolStripMenuItem.Size = New System.Drawing.Size(151, 52)
         Me.TipoCambioToolStripMenuItem.Text = "Tipo Cambio"
         '
         'RegistrarToolStripMenuItem
         '
         Me.RegistrarToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.Add
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(153, 26)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'ProveedoresToolStripMenuItem1
@@ -299,19 +301,19 @@ Partial Class Administrador
         Me.ProveedoresToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.proveedores
         Me.ProveedoresToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(157, 68)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(151, 52)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'RegistrarProveedorToolStripMenuItem
         '
         Me.RegistrarProveedorToolStripMenuItem.Name = "RegistrarProveedorToolStripMenuItem"
-        Me.RegistrarProveedorToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.RegistrarProveedorToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.RegistrarProveedorToolStripMenuItem.Text = "Registrar Proveedor"
         '
         'ModficarProveedorToolStripMenuItem
         '
         Me.ModficarProveedorToolStripMenuItem.Name = "ModficarProveedorToolStripMenuItem"
-        Me.ModficarProveedorToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.ModficarProveedorToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.ModficarProveedorToolStripMenuItem.Text = "Modficar Proveedor"
         '
         'ToolStripMenuItem1
@@ -320,62 +322,68 @@ Partial Class Administrador
         Me.ToolStripMenuItem1.Image = Global.SICAF.My.Resources.Resources.proveedores
         Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(132, 68)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(151, 52)
         Me.ToolStripMenuItem1.Text = "Reportes"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem2.Text = "Reporte de asignacion de activos"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem3.Text = "Reporte de Activos"
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem4.Text = "Reporte devoluciones  Activos"
         '
         'ToolStripMenuItem5
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem5.Text = "Reporte de bajas de activos"
         '
         'ToolStripMenuItem6
         '
         Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem6.Text = "Reporte de empleados"
         '
         'ToolStripMenuItem7
         '
         Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem7.Text = "Reporte de mantenimiento"
         '
         'ToolStripMenuItem8
         '
         Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem8.Text = "Reporte de revaluo"
         '
         'ToolStripMenuItem9
         '
         Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem9.Text = "Reporte de proveedores"
         '
         'ToolStripMenuItem10
         '
         Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
-        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(307, 26)
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(317, 26)
         Me.ToolStripMenuItem10.Text = "Reporte de Entrega"
+        '
+        'ToolStripMenuItem11
+        '
+        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
+        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(317, 26)
+        Me.ToolStripMenuItem11.Text = "Reporte de Devoluciones"
         '
         'ActivoToolStripMenuItem
         '
@@ -389,7 +397,7 @@ Partial Class Administrador
         'ActivoNuevoToolStripMenuItem
         '
         Me.ActivoNuevoToolStripMenuItem.Name = "ActivoNuevoToolStripMenuItem"
-        Me.ActivoNuevoToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.ActivoNuevoToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.ActivoNuevoToolStripMenuItem.Text = "Activo Nuevo"
         '
         'ProveedoresToolStripMenuItem
@@ -406,21 +414,21 @@ Partial Class Administrador
         '
         Me.NuevoToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources._new
         Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.NuevoToolStripMenuItem.Text = "Nuevo Proveedor"
         '
         'ModificarProveedorToolStripMenuItem
         '
         Me.ModificarProveedorToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.update
         Me.ModificarProveedorToolStripMenuItem.Name = "ModificarProveedorToolStripMenuItem"
-        Me.ModificarProveedorToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ModificarProveedorToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.ModificarProveedorToolStripMenuItem.Text = "Modificar Proveedor"
         '
         'EliminarProveedorToolStripMenuItem
         '
         Me.EliminarProveedorToolStripMenuItem.Image = Global.SICAF.My.Resources.Resources.delete
         Me.EliminarProveedorToolStripMenuItem.Name = "EliminarProveedorToolStripMenuItem"
-        Me.EliminarProveedorToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.EliminarProveedorToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.EliminarProveedorToolStripMenuItem.Text = "Eliminar Proveedor"
         '
         'UsuariosToolStripMenuItem
@@ -436,32 +444,26 @@ Partial Class Administrador
         'NuevoUsuarioToolStripMenuItem
         '
         Me.NuevoUsuarioToolStripMenuItem.Name = "NuevoUsuarioToolStripMenuItem"
-        Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.NuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario"
         '
         'ModificarUsuarioToolStripMenuItem
         '
         Me.ModificarUsuarioToolStripMenuItem.Name = "ModificarUsuarioToolStripMenuItem"
-        Me.ModificarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.ModificarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.ModificarUsuarioToolStripMenuItem.Text = "Modificar Usuario"
         '
         'ElimiarUsuarioToolStripMenuItem
         '
         Me.ElimiarUsuarioToolStripMenuItem.Name = "ElimiarUsuarioToolStripMenuItem"
-        Me.ElimiarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.ElimiarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.ElimiarUsuarioToolStripMenuItem.Text = "Elimiar Usuario"
-        '
-        'ToolStripMenuItem11
-        '
-        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
-        Me.ToolStripMenuItem11.Size = New System.Drawing.Size(307, 26)
-        Me.ToolStripMenuItem11.Text = "Reporte de Devoluciones"
         '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1166, 638)
+        Me.ClientSize = New System.Drawing.Size(1028, 638)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IsMdiContainer = True
@@ -517,6 +519,7 @@ Partial Class Administrador
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RegistrarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModficarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents QueriesTableAdapter1 As SICAF.sicafDataSetTableAdapters.QueriesTableAdapter
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem

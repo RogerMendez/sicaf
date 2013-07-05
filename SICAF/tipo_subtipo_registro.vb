@@ -2,10 +2,6 @@
     Public codt As Integer
     Public nombre As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.RegistroTipoToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub tipo_subtipo_registro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         codt = Nothing
         nombre = String.Empty
@@ -20,7 +16,7 @@
             filas = Me.QueriesTableAdapter1.insertar_tipo(TextBox1.Text, codt)
             If (filas) Then
                 GroupBox2.Visible = True
-                Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+                Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
                 nombre = TextBox1.Text
                 Label2.Text = "SubTipos En El Tipo " + nombre
                 TextBox1.Text = String.Empty
@@ -37,7 +33,7 @@
             ErrorProvider1.SetError(TextBox2, Nothing)
             filas = Me.SubtipoTableAdapter.Insert(TextBox2.Text, codt)
             If (filas) Then
-                Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+                Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
                 TextBox2.Text = String.Empty
             Else
                 MessageBox.Show("OCURRIO UN ERROR AL AGREGAR EL TIPO")

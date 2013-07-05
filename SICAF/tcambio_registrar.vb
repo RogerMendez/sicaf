@@ -3,15 +3,11 @@
     Dim fecha As Date
     Dim dolar, ufv As Double
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.RegistrarToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub tcambio_registrar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If (Administrador.codigo = Nothing) Then
-            respo = Administrador.codigo
+        If (Administrador.cod_respo = Nothing) Then
+            respo = Principal.cod_respo
         Else
-            respo = Principal.codigo
+            respo = Administrador.cod_respo
         End If
         fecha = Nothing
         dolar = Nothing

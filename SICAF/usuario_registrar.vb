@@ -2,10 +2,6 @@
     Dim nombre, ape, rol, tipo, pass, confirpass As String
     Public nick As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.NuevoUsuarioToolStripMenuItem1.Enabled = True
-    End Sub
-
     Private Sub usuario_registrar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         nombre = String.Empty
         ape = String.Empty

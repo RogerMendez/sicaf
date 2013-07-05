@@ -2,10 +2,6 @@
     Dim ci As Integer
     Dim pat, nom, cargo, uni As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.RegistrarEmpleadoToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub empleado_registrar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.UnidadTableAdapter.Fill(Me.SicafDataSet.unidad)
         ci = Nothing

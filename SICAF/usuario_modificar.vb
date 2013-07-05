@@ -1,10 +1,6 @@
 ﻿Public Class usuario_modificar
     Dim nombre, ape, rol, tipo, nick, nick1, pass, confirpass, cod As String
 
-    Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
-        Administrador.ModificarUsuarioToolStripMenuItem1.Enabled = True
-    End Sub
-
     Private Sub usuario_modificar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         nombre = String.Empty
         ape = String.Empty

@@ -21,7 +21,7 @@
             GroupBox2.Visible = True
             codt = NombreComboBox.SelectedValue
             nombre = NombreComboBox.Text
-            Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+            Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
             ErrorProvider1.SetError(NombreComboBox, Nothing)
             Label2.Text = "SubTipos En El Tipo " + nombre
         Else
@@ -36,7 +36,7 @@
         codt = My.Forms.tipo_subtipo_registro.codt
         nombre = My.Forms.tipo_subtipo_registro.nombre
         If (codt.ToString.Length > 0) Then
-            Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+            Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
 
             Label2.Text = "SubTipos En El Tipo " + nombre
         End If
@@ -46,7 +46,7 @@
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         'agregar subtipo
         subtipo_agregar.ShowDialog()
-        Me.SubtipoTableAdapter.mostrar_subtipo_codtipo(SicafDataSet.subtipo, codt)
+        Me.SubtipoTableAdapter.mostrar_suptipo_codtipo(SicafDataSet.subtipo, codt)
         Me.TipoTableAdapter.Fill(Me.SicafDataSet.tipo)
     End Sub
 
