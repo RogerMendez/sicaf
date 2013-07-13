@@ -1221,16 +1221,18 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mostrar_asignacionesTableAdapter" GeneratorDataComponentClassName="mostrar_asignacionesTableAdapter" Name="mostrar_asignaciones" UserDataComponentName="mostrar_asignacionesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_asignaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_asignaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Codigo A. F.], [Nombre Tipo], [Nombre SubTipo], unidad, marca, Cedula, Funcionario, cargo, [Fecha Asignación], Observacion FROM dbo.mostrar_asignaciones</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        mostrar_asignaciones.*
+FROM            mostrar_asignaciones</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="cod_asing" DataSetColumn="cod_asing" />
               <Mapping SourceColumn="Codigo A. F." DataSetColumn="Codigo A_ F_" />
               <Mapping SourceColumn="Nombre Tipo" DataSetColumn="Nombre Tipo" />
               <Mapping SourceColumn="Nombre SubTipo" DataSetColumn="Nombre SubTipo" />
@@ -1243,7 +1245,7 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
               <Mapping SourceColumn="Observacion" DataSetColumn="Observacion" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_asignaciones_funcionario" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="mostrar_asignaciones_funcionario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="mostrar_asignaciones_funcionario" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="mostrar_asignaciones_funcionario">
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_asignaciones_funcionario" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="mostrar_asignaciones_empleado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="mostrar_asignaciones_empleado" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="mostrar_asignaciones_empleado">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.mostrar_asignaciones_funcionario</CommandText>
@@ -1746,6 +1748,46 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="asignacion_unidadTableAdapter" GeneratorDataComponentClassName="asignacion_unidadTableAdapter" Name="asignacion_unidad" UserDataComponentName="asignacion_unidadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.asignacion_unidad" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codaf, cod_uni, Descripcion, [Tipo - Subtipo A.], Cedula, Nombre, Marca, Unidad, Procedencia, [Cond. Activo], [F. Asignacion], [U. Decripcion], Observacion FROM dbo.asignacion_unidad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codaf" DataSetColumn="codaf" />
+              <Mapping SourceColumn="cod_uni" DataSetColumn="cod_uni" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Tipo - Subtipo A." DataSetColumn="Tipo - Subtipo A_" />
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Unidad" DataSetColumn="Unidad" />
+              <Mapping SourceColumn="Procedencia" DataSetColumn="Procedencia" />
+              <Mapping SourceColumn="Cond. Activo" DataSetColumn="Cond_ Activo" />
+              <Mapping SourceColumn="F. Asignacion" DataSetColumn="F_ Asignacion" />
+              <Mapping SourceColumn="U. Decripcion" DataSetColumn="U_ Decripcion" />
+              <Mapping SourceColumn="Observacion" DataSetColumn="Observacion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.mostrar_activos_unidad_asinado" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="mostrar_activos_unidad_asinado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="mostrar_activos_unidad_asinado" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="mostrar_activos_unidad_asinado">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.mostrar_activos_unidad_asinado</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@unidad" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.actualizar_empleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="actualizar_empleado" MethodsParameterType="CLR" Modifier="Public" Name="actualizar_empleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="actualizar_empleado">
@@ -2100,6 +2142,18 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
               </DbCommand>
             </SelectCommand>
           </DbSource>
+          <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.unidad_empleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="unidad_empleado" MethodsParameterType="CLR" Modifier="Public" Name="unidad_empleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy26" UserSourceName="unidad_empleado">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.unidad_empleado</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ci" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="InputOutput" ParameterName="@unidad" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
           <DbSource ConnectionRef="sicafConnectionString (MySettings)" DbObjectName="sicaf.dbo.registro_devolucion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="registro_devolucion" MethodsParameterType="CLR" Modifier="Public" Name="registro_devolucion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="registro_devolucion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
@@ -2110,6 +2164,7 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@codfun" Precision="0" ProviderType="VarChar" Scale="0" Size="60" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@resp" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@obs" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cod_asig" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
@@ -2822,7 +2877,8 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
         <xs:element name="mostrar_asignaciones" msprop:Generator_TableClassName="mostrar_asignacionesDataTable" msprop:Generator_TableVarName="tablemostrar_asignaciones" msprop:Generator_RowChangedName="mostrar_asignacionesRowChanged" msprop:Generator_TablePropName="mostrar_asignaciones" msprop:Generator_RowDeletingName="mostrar_asignacionesRowDeleting" msprop:Generator_RowChangingName="mostrar_asignacionesRowChanging" msprop:Generator_RowEvHandlerName="mostrar_asignacionesRowChangeEventHandler" msprop:Generator_RowDeletedName="mostrar_asignacionesRowDeleted" msprop:Generator_RowClassName="mostrar_asignacionesRow" msprop:Generator_UserTableName="mostrar_asignaciones" msprop:Generator_RowEvArgName="mostrar_asignacionesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Codigo_x0020_A__x0020_F_" msprop:Generator_ColumnVarNameInTable="columnCodigo_A__F_" msprop:Generator_ColumnPropNameInRow="Codigo_A__F_" msprop:Generator_ColumnPropNameInTable="Codigo_A__F_Column" msprop:Generator_UserColumnName="Codigo A_ F_">
+              <xs:element name="cod_asing" msprop:Generator_ColumnVarNameInTable="columncod_asing" msprop:Generator_ColumnPropNameInRow="cod_asing" msprop:Generator_ColumnPropNameInTable="cod_asingColumn" msprop:Generator_UserColumnName="cod_asing" type="xs:int" />
+              <xs:element name="Codigo_x0020_A__x0020_F_" msdata:Caption="Codigo A. F." msprop:Generator_ColumnVarNameInTable="columnCodigo_A__F_" msprop:Generator_ColumnPropNameInRow="Codigo_A__F_" msprop:Generator_ColumnPropNameInTable="Codigo_A__F_Column" msprop:Generator_UserColumnName="Codigo A_ F_">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
@@ -4141,6 +4197,97 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="asignacion_unidad" msprop:Generator_TableClassName="asignacion_unidadDataTable" msprop:Generator_TableVarName="tableasignacion_unidad" msprop:Generator_TablePropName="asignacion_unidad" msprop:Generator_RowDeletingName="asignacion_unidadRowDeleting" msprop:Generator_RowChangingName="asignacion_unidadRowChanging" msprop:Generator_RowEvHandlerName="asignacion_unidadRowChangeEventHandler" msprop:Generator_RowDeletedName="asignacion_unidadRowDeleted" msprop:Generator_UserTableName="asignacion_unidad" msprop:Generator_RowChangedName="asignacion_unidadRowChanged" msprop:Generator_RowEvArgName="asignacion_unidadRowChangeEvent" msprop:Generator_RowClassName="asignacion_unidadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codaf" msprop:Generator_ColumnVarNameInTable="columncodaf" msprop:Generator_ColumnPropNameInRow="codaf" msprop:Generator_ColumnPropNameInTable="codafColumn" msprop:Generator_UserColumnName="codaf">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_uni" msprop:Generator_ColumnVarNameInTable="columncod_uni" msprop:Generator_ColumnPropNameInRow="cod_uni" msprop:Generator_ColumnPropNameInTable="cod_uniColumn" msprop:Generator_UserColumnName="cod_uni">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo_x0020_-_x0020_Subtipo_x0020_A_" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="_columnTipo___Subtipo_A_" msprop:Generator_ColumnPropNameInRow="_Tipo___Subtipo_A_" msprop:Generator_ColumnPropNameInTable="_Tipo___Subtipo_A_Column" msprop:Generator_UserColumnName="Tipo - Subtipo A_" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="72" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unidad" msprop:Generator_ColumnVarNameInTable="columnUnidad" msprop:Generator_ColumnPropNameInRow="Unidad" msprop:Generator_ColumnPropNameInTable="UnidadColumn" msprop:Generator_UserColumnName="Unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Procedencia" msprop:Generator_ColumnVarNameInTable="columnProcedencia" msprop:Generator_ColumnPropNameInRow="Procedencia" msprop:Generator_ColumnPropNameInTable="ProcedenciaColumn" msprop:Generator_UserColumnName="Procedencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cond__x0020_Activo" msprop:Generator_ColumnVarNameInTable="columnCond__Activo" msprop:Generator_ColumnPropNameInRow="Cond__Activo" msprop:Generator_ColumnPropNameInTable="Cond__ActivoColumn" msprop:Generator_UserColumnName="Cond_ Activo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F__x0020_Asignacion" msprop:Generator_ColumnVarNameInTable="columnF__Asignacion" msprop:Generator_ColumnPropNameInRow="F__Asignacion" msprop:Generator_ColumnPropNameInTable="F__AsignacionColumn" msprop:Generator_UserColumnName="F_ Asignacion" type="xs:dateTime" />
+              <xs:element name="U__x0020_Decripcion" msprop:Generator_ColumnVarNameInTable="columnU__Decripcion" msprop:Generator_ColumnPropNameInRow="U__Decripcion" msprop:Generator_ColumnPropNameInTable="U__DecripcionColumn" msprop:Generator_UserColumnName="U_ Decripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observacion" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_UserColumnName="Observacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -4254,6 +4401,12 @@ SELECT cod_user, nombres, apellidos, password, rol, tipo, usuario FROM users WHE
     <xs:unique name="select_mostrar_bajas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:select_mostrar_bajas" />
       <xs:field xpath="mstns:codaf" />
+    </xs:unique>
+    <xs:unique name="asignacion_unidad_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:asignacion_unidad" />
+      <xs:field xpath="mstns:codaf" />
+      <xs:field xpath="mstns:cod_uni" />
+      <xs:field xpath="mstns:Cedula" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

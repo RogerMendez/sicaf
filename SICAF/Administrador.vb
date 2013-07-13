@@ -136,7 +136,7 @@ Public Class Administrador
         cod = My.Forms.login.cod_res
         'MessageBox.Show("El codigo es:      " & cod)
         'EN ESTA LINEA DE CODIGO ESTA BOTANDO ERROR ↓
-        'Me.QueriesTableAdapter1.buscando(cod, cod_respo)
+        Me.QueriesTableAdapter1.buscando(cod, cod_respo)
     End Sub
 
     Private Sub ToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem3.Click

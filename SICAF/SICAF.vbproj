@@ -110,6 +110,12 @@
       <DependentUpon>ACTIVOS.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="activos_asignados_unidad.Designer.vb">
+      <DependentUpon>activos_asignados_unidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="activos_asignados_unidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administrador.Designer.vb">
       <DependentUpon>Administrador.vb</DependentUpon>
     </Compile>
@@ -462,6 +468,9 @@
     <EmbeddedResource Include="ACTIVOS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ACTIVOS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="activos_asignados_unidad.resx">
+      <DependentUpon>activos_asignados_unidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>

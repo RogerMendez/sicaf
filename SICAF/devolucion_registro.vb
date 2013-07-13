@@ -19,7 +19,8 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         'mostrar asignaciones funcionario
-        Me.Mostrar_asignacionesTableAdapter.mostrar_asignaciones_funcionario(SicafDataSet.mostrar_asignaciones, ci)
+        Me.Mostrar_asignacionesTableAdapter.mostrar_asignaciones_empleado(Me.SicafDataSet.mostrar_asignaciones, ci)
+        'Mostrar_asignacionesTableAdapter.mostrar_asignaciones_funcionario(SicafDataSet.mostrar_asignaciones, ci)
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -31,14 +32,17 @@
         'devolver
         Dim filas As Object
         Dim codaf As String
+        Dim cod_asig As Integer
         codaf = String.Empty
+        cod_asig = Nothing
         codaf = Me.SicafDataSet.mostrar_asignaciones(Me.MostrarasignacionesBindingSource.Position).Codigo_A__F_
+        cod_asig = Me.SicafDataSet.mostrar_asignaciones(Me.MostrarasignacionesBindingSource.Position).cod_asing
         If (codaf.Length > 0 And ci.Length > 0) Then
             If MessageBox.Show("¿Estas Seguro de Realizar La Devolucion del Activo?", "Mensaje de confirmación", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                filas = Me.QueriesTableAdapter1.registro_devolucion(codaf, ci, respo, RichTextBox1.Text)
-                If (filas = 2) Then
+                filas = Me.QueriesTableAdapter1.registro_devolucion(codaf, ci, respo, RichTextBox1.Text, cod_asig)
+                If (filas = 3) Then
                     MessageBox.Show("DEBOLUCION REALIZADA CORRECTAMENTE")
-                    Me.Mostrar_asignacionesTableAdapter.mostrar_asignaciones_funcionario(SicafDataSet.mostrar_asignaciones, ci)
+                    Me.Mostrar_asignacionesTableAdapter.mostrar_asignaciones_empleado(SicafDataSet.mostrar_asignaciones, ci)
                 Else
                     MessageBox.Show("OCURRIO UN ERROR")
                 End If

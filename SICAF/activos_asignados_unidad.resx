@@ -117,21 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
+  <metadata name="AsignacionunidadBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MenuStrip2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        R0lGODlhAQA8AIYAAAAAAP///3OOvXCKt3GLuHGOvG6Ktoqs44mr4Yiq4Ian3ISl2YOj14Ki1oGh1H+e
-        0X6dz3ybzHuZynqYyXiVxXaTwnOPvXKOvHGNunCMuIut5Ius44ut44qr4oqs4omq4Iip34ip3oen3Yeo
-        3Yam24Wl2oWm2oWl2YSk2IOi1oKi1YKh1IGg04Cf0oCg0oCf0X+e0H6czn6dzn2bzXyay3uYyXqYyHqX
-        x3mWxniVxHeUw3aTwXWRwHWSwHSQvnKNu2+Ktoqr4Yen3ISk13+dz7DH7bLJ7rHI7bPJ7rLI7bLJ7Xua
-        yv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
-        AABMACwAAAAAAQA8AAAIRgANDCCA4ccFCz549KigIwcFHDYmSFgSYUYMGURgvHDBwsGKBikYDEFxogQJ
-        EgqEjBgRAkSCDx8QBPHgYcMGDUqSGDFyJCAAOw==
-</value>
-  </data>
+  <metadata name="SicafDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Asignacion_unidadTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>365, 17</value>
+  </metadata>
 </root>
